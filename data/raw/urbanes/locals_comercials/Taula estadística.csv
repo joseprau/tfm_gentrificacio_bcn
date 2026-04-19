@@ -1,0 +1,366 @@
+Territori,Tipus de territori,Temps,Activitats immobiliàries,Ensenyament,Equipaments culturals i recreatius,Finances i assegurances,"Manteniment, neteja i producció",Reparacions (Electrodomèstics i automòbils),"Restaurants, bars i hotels (Inclòs hostals, pensions i fondes)",Sanitat i assistència
+el Raval,Barri,31 Des. 2014,12,68,41,53,26,7,544,7
+el Raval,Barri,31 Des. 2016,12,54,66,40,-,11,469,8
+el Raval,Barri,31 Des. 2019,10,52,62,36,-,9,540,14
+el Raval,Barri,31 Des. 2022,8,44,59,26,-,10,500,8
+el Raval,Barri,31 Des. 2024,6,49,55,27,-,10,537,14
+el Barri Gòtic,Barri,31 Des. 2014,1,33,41,40,3,2,517,4
+el Barri Gòtic,Barri,31 Des. 2016,1,16,46,33,-,2,458,4
+el Barri Gòtic,Barri,31 Des. 2019,3,17,63,30,-,-,513,4
+el Barri Gòtic,Barri,31 Des. 2022,2,19,56,23,-,2,440,6
+el Barri Gòtic,Barri,31 Des. 2024,2,25,57,24,-,-,450,8
+la Barceloneta,Barri,31 Des. 2014,13,25,6,12,4,2,218,8
+la Barceloneta,Barri,31 Des. 2016,9,15,10,8,-,5,193,8
+la Barceloneta,Barri,31 Des. 2019,10,17,9,7,-,5,200,14
+la Barceloneta,Barri,31 Des. 2022,7,15,9,7,-,5,177,15
+la Barceloneta,Barri,31 Des. 2024,9,16,9,5,-,5,190,16
+"Sant Pere, Santa Caterina i la Ribera",Barri,31 Des. 2014,9,54,17,31,19,3,374,8
+"Sant Pere, Santa Caterina i la Ribera",Barri,31 Des. 2016,11,35,48,22,-,4,333,11
+"Sant Pere, Santa Caterina i la Ribera",Barri,31 Des. 2019,17,39,56,17,-,2,394,12
+"Sant Pere, Santa Caterina i la Ribera",Barri,31 Des. 2022,14,39,58,20,-,2,387,13
+"Sant Pere, Santa Caterina i la Ribera",Barri,31 Des. 2024,13,46,68,18,1,2,403,17
+el Fort Pienc,Barri,31 Des. 2014,10,28,2,18,16,39,174,16
+el Fort Pienc,Barri,31 Des. 2016,18,28,22,21,2,36,181,23
+el Fort Pienc,Barri,31 Des. 2019,14,29,22,16,1,33,209,23
+el Fort Pienc,Barri,31 Des. 2022,12,28,22,13,3,30,200,23
+el Fort Pienc,Barri,31 Des. 2024,17,35,23,10,4,31,199,30
+la Sagrada Família,Barri,31 Des. 2014,33,45,9,66,28,57,357,36
+la Sagrada Família,Barri,31 Des. 2016,39,41,23,57,8,57,369,55
+la Sagrada Família,Barri,31 Des. 2019,43,43,17,52,8,48,393,58
+la Sagrada Família,Barri,31 Des. 2022,38,45,15,53,6,38,396,58
+la Sagrada Família,Barri,31 Des. 2024,39,42,14,48,2,38,389,64
+la Dreta de l'Eixample,Barri,31 Des. 2014,28,110,36,150,26,36,752,64
+la Dreta de l'Eixample,Barri,31 Des. 2016,52,93,105,139,14,46,831,112
+la Dreta de l'Eixample,Barri,31 Des. 2019,64,97,79,110,15,43,921,105
+la Dreta de l'Eixample,Barri,31 Des. 2022,52,82,62,103,15,40,912,105
+la Dreta de l'Eixample,Barri,31 Des. 2024,43,89,68,88,12,40,893,121
+l'Antiga Esquerra de l'Eixample,Barri,31 Des. 2014,30,55,12,68,23,36,678,63
+l'Antiga Esquerra de l'Eixample,Barri,31 Des. 2016,57,52,112,71,8,53,642,97
+l'Antiga Esquerra de l'Eixample,Barri,31 Des. 2019,53,45,71,60,6,46,731,99
+l'Antiga Esquerra de l'Eixample,Barri,31 Des. 2022,36,42,55,47,4,48,708,109
+l'Antiga Esquerra de l'Eixample,Barri,31 Des. 2024,36,43,46,44,4,44,735,117
+la Nova Esquerra de l'Eixample,Barri,31 Des. 2014,28,80,8,63,30,53,407,54
+la Nova Esquerra de l'Eixample,Barri,31 Des. 2016,33,63,35,52,20,67,397,74
+la Nova Esquerra de l'Eixample,Barri,31 Des. 2019,35,68,31,41,12,70,443,90
+la Nova Esquerra de l'Eixample,Barri,31 Des. 2022,37,73,25,26,11,68,406,98
+la Nova Esquerra de l'Eixample,Barri,31 Des. 2024,43,77,21,28,7,65,408,100
+Sant Antoni,Barri,31 Des. 2014,16,52,5,45,35,28,354,28
+Sant Antoni,Barri,31 Des. 2016,26,43,33,37,6,43,371,38
+Sant Antoni,Barri,31 Des. 2019,36,44,28,33,12,33,417,47
+Sant Antoni,Barri,31 Des. 2022,26,46,24,32,8,32,405,51
+Sant Antoni,Barri,31 Des. 2024,28,45,21,28,5,32,396,59
+el Poble-sec,Barri,31 Des. 2014,9,48,17,23,12,39,322,21
+el Poble-sec,Barri,31 Des. 2016,12,27,55,18,7,42,274,11
+el Poble-sec,Barri,31 Des. 2019,14,33,54,18,6,37,296,18
+el Poble-sec,Barri,31 Des. 2022,14,32,58,18,6,32,279,17
+el Poble-sec,Barri,31 Des. 2024,8,43,55,13,7,30,290,24
+la Marina del Prat Vermell,Barri,31 Des. 2014,-,14,-,-,1,-,7,-
+la Marina del Prat Vermell,Barri,31 Des. 2016,-,2,-,1,3,14,17,-
+la Marina del Prat Vermell,Barri,31 Des. 2019,-,2,-,1,2,21,12,-
+la Marina del Prat Vermell,Barri,31 Des. 2022,1,3,-,1,3,18,11,-
+la Marina del Prat Vermell,Barri,31 Des. 2024,1,3,-,1,1,16,11,-
+la Marina de Port,Barri,31 Des. 2014,4,23,-,17,5,9,93,27
+la Marina de Port,Barri,31 Des. 2016,6,13,13,18,7,12,103,22
+la Marina de Port,Barri,31 Des. 2019,7,18,11,14,5,11,98,24
+la Marina de Port,Barri,31 Des. 2022,8,19,15,12,4,7,105,30
+la Marina de Port,Barri,31 Des. 2024,8,23,15,11,4,7,108,26
+la Font de la Guatlla,Barri,31 Des. 2014,1,14,2,5,1,7,34,11
+la Font de la Guatlla,Barri,31 Des. 2016,1,11,2,5,-,6,37,5
+la Font de la Guatlla,Barri,31 Des. 2019,1,11,2,1,1,7,34,4
+la Font de la Guatlla,Barri,31 Des. 2022,1,10,2,2,2,6,34,4
+la Font de la Guatlla,Barri,31 Des. 2024,1,11,2,1,-,7,35,5
+Hostafrancs,Barri,31 Des. 2014,4,14,4,18,1,10,91,11
+Hostafrancs,Barri,31 Des. 2016,9,16,12,18,4,18,153,25
+Hostafrancs,Barri,31 Des. 2019,12,20,10,15,5,12,159,25
+Hostafrancs,Barri,31 Des. 2022,10,19,8,12,4,12,152,28
+Hostafrancs,Barri,31 Des. 2024,12,22,7,12,4,12,155,29
+la Bordeta,Barri,31 Des. 2014,5,30,1,6,5,19,58,8
+la Bordeta,Barri,31 Des. 2016,4,19,3,12,4,16,61,10
+la Bordeta,Barri,31 Des. 2019,5,27,11,13,3,17,62,11
+la Bordeta,Barri,31 Des. 2022,3,24,11,9,3,17,65,11
+la Bordeta,Barri,31 Des. 2024,3,24,9,9,4,17,63,13
+Sants - Badal,Barri,31 Des. 2014,7,15,-,9,6,26,56,13
+Sants - Badal,Barri,31 Des. 2016,15,9,9,22,8,35,99,13
+Sants - Badal,Barri,31 Des. 2019,15,11,6,20,6,27,109,23
+Sants - Badal,Barri,31 Des. 2022,13,15,5,18,3,17,105,25
+Sants - Badal,Barri,31 Des. 2024,12,19,4,14,4,17,99,29
+Sants,Barri,31 Des. 2014,19,54,6,32,18,23,195,24
+Sants,Barri,31 Des. 2016,32,50,27,43,11,51,263,47
+Sants,Barri,31 Des. 2019,33,59,19,33,11,45,273,56
+Sants,Barri,31 Des. 2022,28,56,23,25,8,34,266,55
+Sants,Barri,31 Des. 2024,27,66,24,24,9,34,278,64
+les Corts,Barri,31 Des. 2014,18,68,2,63,33,35,326,79
+les Corts,Barri,31 Des. 2016,27,66,37,79,10,33,354,86
+les Corts,Barri,31 Des. 2019,36,74,26,73,8,36,345,104
+les Corts,Barri,31 Des. 2022,34,66,22,61,7,36,340,109
+les Corts,Barri,31 Des. 2024,41,77,14,54,8,34,346,118
+la Maternitat i Sant Ramon,Barri,31 Des. 2014,11,39,7,12,14,14,109,27
+la Maternitat i Sant Ramon,Barri,31 Des. 2016,10,42,18,22,4,20,113,27
+la Maternitat i Sant Ramon,Barri,31 Des. 2019,13,41,12,18,5,17,130,32
+la Maternitat i Sant Ramon,Barri,31 Des. 2022,11,47,12,8,2,15,117,36
+la Maternitat i Sant Ramon,Barri,31 Des. 2024,8,51,13,7,4,17,117,41
+Pedralbes,Barri,31 Des. 2014,3,53,5,17,-,-,36,6
+Pedralbes,Barri,31 Des. 2016,2,44,3,16,2,-,44,5
+Pedralbes,Barri,31 Des. 2019,3,43,4,11,2,-,38,6
+Pedralbes,Barri,31 Des. 2022,5,41,3,7,2,1,45,7
+Pedralbes,Barri,31 Des. 2024,5,45,3,6,3,1,48,8
+"Vallvidrera, el Tibidabo i les Planes",Barri,31 Des. 2014,1,9,4,2,-,1,14,1
+"Vallvidrera, el Tibidabo i les Planes",Barri,31 Des. 2016,2,1,2,2,-,2,7,3
+"Vallvidrera, el Tibidabo i les Planes",Barri,31 Des. 2019,2,3,5,3,-,1,11,3
+"Vallvidrera, el Tibidabo i les Planes",Barri,31 Des. 2022,2,5,6,2,-,1,11,3
+"Vallvidrera, el Tibidabo i les Planes",Barri,31 Des. 2024,2,6,7,2,-,1,10,3
+Sarrià,Barri,31 Des. 2014,7,86,3,22,9,14,80,24
+Sarrià,Barri,31 Des. 2016,12,58,10,17,2,17,87,39
+Sarrià,Barri,31 Des. 2019,26,63,19,16,1,18,94,58
+Sarrià,Barri,31 Des. 2022,27,67,13,14,2,17,88,57
+Sarrià,Barri,31 Des. 2024,25,71,11,11,3,17,88,67
+les Tres Torres,Barri,31 Des. 2014,11,21,5,21,5,4,55,59
+les Tres Torres,Barri,31 Des. 2016,9,20,4,17,-,2,53,58
+les Tres Torres,Barri,31 Des. 2019,16,19,2,17,3,2,53,91
+les Tres Torres,Barri,31 Des. 2022,14,18,3,12,2,2,53,90
+les Tres Torres,Barri,31 Des. 2024,15,19,3,9,2,2,49,93
+Sant Gervasi - la Bonanova,Barri,31 Des. 2014,8,105,-,30,16,13,132,64
+Sant Gervasi - la Bonanova,Barri,31 Des. 2016,13,67,10,31,4,17,130,61
+Sant Gervasi - la Bonanova,Barri,31 Des. 2019,18,70,9,30,4,15,144,84
+Sant Gervasi - la Bonanova,Barri,31 Des. 2022,16,70,11,27,4,15,144,96
+Sant Gervasi - la Bonanova,Barri,31 Des. 2024,17,76,10,20,4,15,144,100
+Sant Gervasi - Galvany,Barri,31 Des. 2014,39,80,7,111,46,28,431,105
+Sant Gervasi - Galvany,Barri,31 Des. 2016,44,63,40,92,4,40,397,106
+Sant Gervasi - Galvany,Barri,31 Des. 2019,52,62,21,71,3,31,457,122
+Sant Gervasi - Galvany,Barri,31 Des. 2022,51,57,21,59,2,32,425,135
+Sant Gervasi - Galvany,Barri,31 Des. 2024,52,61,16,52,1,32,404,148
+el Putxet i el Farró,Barri,31 Des. 2014,22,55,4,23,24,24,122,27
+el Putxet i el Farró,Barri,31 Des. 2016,19,50,11,20,3,23,128,35
+el Putxet i el Farró,Barri,31 Des. 2019,24,49,15,17,1,19,120,57
+el Putxet i el Farró,Barri,31 Des. 2022,23,48,12,15,1,16,126,53
+el Putxet i el Farró,Barri,31 Des. 2024,29,51,10,15,2,16,127,59
+Vallcarca i els Penitents,Barri,31 Des. 2014,2,35,2,6,1,13,39,17
+Vallcarca i els Penitents,Barri,31 Des. 2016,2,24,10,8,-,21,37,22
+Vallcarca i els Penitents,Barri,31 Des. 2019,3,31,7,5,1,20,40,20
+Vallcarca i els Penitents,Barri,31 Des. 2022,3,29,6,5,2,17,42,22
+Vallcarca i els Penitents,Barri,31 Des. 2024,2,30,6,5,2,15,37,23
+el Coll,Barri,31 Des. 2014,-,5,2,2,-,2,14,2
+el Coll,Barri,31 Des. 2016,1,2,3,4,-,3,11,3
+el Coll,Barri,31 Des. 2019,1,1,2,4,-,2,7,3
+el Coll,Barri,31 Des. 2022,2,1,3,2,-,3,7,2
+el Coll,Barri,31 Des. 2024,1,1,3,2,-,3,7,2
+la Salut,Barri,31 Des. 2014,4,21,1,8,10,9,47,20
+la Salut,Barri,31 Des. 2016,2,14,6,9,2,10,47,18
+la Salut,Barri,31 Des. 2019,2,12,7,7,1,10,49,18
+la Salut,Barri,31 Des. 2022,4,12,6,8,2,8,43,17
+la Salut,Barri,31 Des. 2024,2,14,5,9,2,7,47,18
+la Vila de Gràcia,Barri,31 Des. 2014,24,136,19,57,48,49,527,84
+la Vila de Gràcia,Barri,31 Des. 2016,34,107,127,48,6,77,462,87
+la Vila de Gràcia,Barri,31 Des. 2019,36,135,69,45,7,50,505,108
+la Vila de Gràcia,Barri,31 Des. 2022,39,134,43,32,3,42,501,101
+la Vila de Gràcia,Barri,31 Des. 2024,37,143,47,32,5,44,504,102
+el Camp d'en Grassot i Gràcia Nova,Barri,31 Des. 2014,22,46,2,32,16,47,149,44
+el Camp d'en Grassot i Gràcia Nova,Barri,31 Des. 2016,19,38,23,37,2,57,136,48
+el Camp d'en Grassot i Gràcia Nova,Barri,31 Des. 2019,24,46,14,26,2,54,136,53
+el Camp d'en Grassot i Gràcia Nova,Barri,31 Des. 2022,21,37,8,17,5,50,134,59
+el Camp d'en Grassot i Gràcia Nova,Barri,31 Des. 2024,22,41,10,14,6,51,131,62
+el Baix Guinardó,Barri,31 Des. 2014,9,31,2,16,9,42,113,23
+el Baix Guinardó,Barri,31 Des. 2016,11,23,11,19,10,34,94,24
+el Baix Guinardó,Barri,31 Des. 2019,12,27,8,15,8,37,108,26
+el Baix Guinardó,Barri,31 Des. 2022,10,24,6,14,6,38,97,23
+el Baix Guinardó,Barri,31 Des. 2024,9,25,4,12,5,33,100,26
+Can Baró,Barri,31 Des. 2014,-,6,-,4,1,12,17,1
+Can Baró,Barri,31 Des. 2016,1,3,4,1,-,8,16,1
+Can Baró,Barri,31 Des. 2019,-,3,2,1,-,7,19,2
+Can Baró,Barri,31 Des. 2022,-,5,2,-,-,8,19,1
+Can Baró,Barri,31 Des. 2024,-,4,3,-,-,8,17,1
+el Guinardó,Barri,31 Des. 2014,13,47,-,28,24,58,142,29
+el Guinardó,Barri,31 Des. 2016,20,35,17,29,15,44,119,25
+el Guinardó,Barri,31 Des. 2019,21,36,10,24,10,46,120,33
+el Guinardó,Barri,31 Des. 2022,23,34,13,15,6,41,119,29
+el Guinardó,Barri,31 Des. 2024,23,40,12,11,5,45,118,41
+la Font d'en Fargues,Barri,31 Des. 2014,3,30,-,2,-,5,15,2
+la Font d'en Fargues,Barri,31 Des. 2016,4,17,3,1,-,5,15,3
+la Font d'en Fargues,Barri,31 Des. 2019,3,16,2,1,-,5,14,3
+la Font d'en Fargues,Barri,31 Des. 2022,3,16,1,-,-,3,11,4
+la Font d'en Fargues,Barri,31 Des. 2024,1,17,1,-,-,2,13,6
+el Carmel,Barri,31 Des. 2014,7,17,-,21,14,15,85,8
+el Carmel,Barri,31 Des. 2016,18,22,5,19,3,23,88,18
+el Carmel,Barri,31 Des. 2019,19,23,5,15,6,20,74,18
+el Carmel,Barri,31 Des. 2022,13,21,4,14,3,21,76,17
+el Carmel,Barri,31 Des. 2024,14,23,5,13,5,25,80,20
+la Teixonera,Barri,31 Des. 2014,3,4,-,3,3,11,28,2
+la Teixonera,Barri,31 Des. 2016,2,3,2,2,-,10,30,4
+la Teixonera,Barri,31 Des. 2019,2,4,3,2,-,9,27,3
+la Teixonera,Barri,31 Des. 2022,4,1,3,1,-,6,24,4
+la Teixonera,Barri,31 Des. 2024,4,3,3,1,-,5,24,5
+Sant Genís dels Agudells,Barri,31 Des. 2014,-,14,1,4,-,1,15,2
+Sant Genís dels Agudells,Barri,31 Des. 2016,-,10,3,4,1,3,16,5
+Sant Genís dels Agudells,Barri,31 Des. 2019,-,8,3,4,1,5,15,5
+Sant Genís dels Agudells,Barri,31 Des. 2022,-,8,4,3,1,5,14,6
+Sant Genís dels Agudells,Barri,31 Des. 2024,-,8,4,3,1,5,14,6
+Montbau,Barri,31 Des. 2014,2,21,-,2,2,-,13,4
+Montbau,Barri,31 Des. 2016,3,8,1,3,1,1,14,10
+Montbau,Barri,31 Des. 2019,2,10,2,4,1,1,16,12
+Montbau,Barri,31 Des. 2022,2,10,3,2,1,1,15,9
+Montbau,Barri,31 Des. 2024,2,10,3,2,1,1,15,9
+la Vall d'Hebron,Barri,31 Des. 2014,1,9,1,2,-,1,11,1
+la Vall d'Hebron,Barri,31 Des. 2016,2,9,5,3,1,2,13,2
+la Vall d'Hebron,Barri,31 Des. 2019,2,8,4,3,1,3,13,3
+la Vall d'Hebron,Barri,31 Des. 2022,2,9,4,3,-,3,12,3
+la Vall d'Hebron,Barri,31 Des. 2024,2,9,4,2,-,3,13,4
+la Clota,Barri,31 Des. 2014,-,-,-,-,-,-,2,-
+la Clota,Barri,31 Des. 2016,-,1,-,-,-,-,2,-
+la Clota,Barri,31 Des. 2019,-,1,-,-,-,-,1,-
+la Clota,Barri,31 Des. 2022,-,2,-,-,-,-,1,-
+la Clota,Barri,31 Des. 2024,-,2,-,-,-,-,1,-
+Horta,Barri,31 Des. 2014,10,20,2,16,8,15,112,15
+Horta,Barri,31 Des. 2016,11,23,21,15,6,17,113,31
+Horta,Barri,31 Des. 2019,14,32,14,12,5,17,108,27
+Horta,Barri,31 Des. 2022,12,26,11,8,7,17,107,26
+Horta,Barri,31 Des. 2024,13,26,9,9,4,17,104,29
+Vilapicina i la Torre Llobeta,Barri,31 Des. 2014,9,29,-,25,11,26,117,22
+Vilapicina i la Torre Llobeta,Barri,31 Des. 2016,12,40,12,28,4,41,123,29
+Vilapicina i la Torre Llobeta,Barri,31 Des. 2019,14,42,9,21,6,40,118,38
+Vilapicina i la Torre Llobeta,Barri,31 Des. 2022,16,42,6,17,6,45,115,32
+Vilapicina i la Torre Llobeta,Barri,31 Des. 2024,19,44,6,15,4,39,128,40
+Porta,Barri,31 Des. 2014,4,17,-,18,10,26,95,13
+Porta,Barri,31 Des. 2016,6,29,11,19,8,45,105,15
+Porta,Barri,31 Des. 2019,7,31,10,14,8,27,105,19
+Porta,Barri,31 Des. 2022,7,32,11,13,6,32,104,22
+Porta,Barri,31 Des. 2024,7,28,10,13,5,29,108,25
+el Turó de la Peira,Barri,31 Des. 2014,6,7,1,8,9,4,46,9
+el Turó de la Peira,Barri,31 Des. 2016,9,9,1,10,-,8,49,10
+el Turó de la Peira,Barri,31 Des. 2019,9,10,2,4,-,7,52,13
+el Turó de la Peira,Barri,31 Des. 2022,10,10,2,5,-,6,52,13
+el Turó de la Peira,Barri,31 Des. 2024,8,12,2,3,1,6,57,12
+Can Peguera,Barri,31 Des. 2014,-,4,-,-,-,-,2,1
+Can Peguera,Barri,31 Des. 2016,-,3,2,-,-,1,2,2
+Can Peguera,Barri,31 Des. 2019,-,3,2,-,-,-,2,2
+Can Peguera,Barri,31 Des. 2022,-,4,1,-,-,-,1,2
+Can Peguera,Barri,31 Des. 2024,-,3,1,-,-,-,1,2
+la Guineueta,Barri,31 Des. 2014,1,27,-,15,2,8,50,11
+la Guineueta,Barri,31 Des. 2016,1,15,7,13,1,9,44,12
+la Guineueta,Barri,31 Des. 2019,2,18,4,7,2,7,44,19
+la Guineueta,Barri,31 Des. 2022,2,20,7,4,2,7,51,15
+la Guineueta,Barri,31 Des. 2024,4,20,7,4,2,8,53,14
+Canyelles,Barri,31 Des. 2014,1,5,1,4,1,4,20,1
+Canyelles,Barri,31 Des. 2016,1,4,3,3,1,5,17,2
+Canyelles,Barri,31 Des. 2019,1,5,2,3,1,5,18,1
+Canyelles,Barri,31 Des. 2022,1,5,3,2,1,6,19,2
+Canyelles,Barri,31 Des. 2024,1,5,3,2,1,6,19,2
+les Roquetes,Barri,31 Des. 2014,3,6,1,6,2,11,46,3
+les Roquetes,Barri,31 Des. 2016,2,9,8,8,2,14,46,8
+les Roquetes,Barri,31 Des. 2019,3,8,7,8,-,13,43,6
+les Roquetes,Barri,31 Des. 2022,3,8,7,6,-,11,45,7
+les Roquetes,Barri,31 Des. 2024,5,7,7,5,-,12,45,7
+Verdun,Barri,31 Des. 2014,6,13,2,8,8,9,63,6
+Verdun,Barri,31 Des. 2016,7,16,5,12,2,8,51,14
+Verdun,Barri,31 Des. 2019,7,15,3,12,1,13,50,9
+Verdun,Barri,31 Des. 2022,5,17,2,12,1,11,48,8
+Verdun,Barri,31 Des. 2024,9,19,3,11,1,9,52,9
+la Prosperitat,Barri,31 Des. 2014,4,16,-,21,13,36,127,19
+la Prosperitat,Barri,31 Des. 2016,7,17,7,22,4,34,131,23
+la Prosperitat,Barri,31 Des. 2019,13,21,8,15,4,33,131,23
+la Prosperitat,Barri,31 Des. 2022,8,21,8,12,3,33,119,26
+la Prosperitat,Barri,31 Des. 2024,11,25,8,11,7,31,124,28
+la Trinitat Nova,Barri,31 Des. 2014,-,5,1,2,-,-,9,-
+la Trinitat Nova,Barri,31 Des. 2016,-,4,3,1,2,2,11,4
+la Trinitat Nova,Barri,31 Des. 2019,-,4,4,1,2,2,11,4
+la Trinitat Nova,Barri,31 Des. 2022,-,5,3,1,-,-,13,3
+la Trinitat Nova,Barri,31 Des. 2024,-,5,3,1,-,-,13,3
+Torre Baró,Barri,31 Des. 2014,-,9,-,-,-,-,1,-
+Torre Baró,Barri,31 Des. 2016,-,2,1,-,1,-,6,3
+Torre Baró,Barri,31 Des. 2019,-,3,1,-,-,-,4,3
+Torre Baró,Barri,31 Des. 2022,-,3,1,-,-,-,3,3
+Torre Baró,Barri,31 Des. 2024,-,3,1,-,-,-,3,3
+Ciutat Meridiana,Barri,31 Des. 2014,2,1,-,9,3,3,15,1
+Ciutat Meridiana,Barri,31 Des. 2016,1,6,1,6,-,2,20,3
+Ciutat Meridiana,Barri,31 Des. 2019,1,6,1,8,-,3,18,3
+Ciutat Meridiana,Barri,31 Des. 2022,2,5,2,7,-,3,17,4
+Ciutat Meridiana,Barri,31 Des. 2024,3,5,3,8,-,2,19,4
+Vallbona,Barri,31 Des. 2014,-,2,-,-,-,-,2,-
+Vallbona,Barri,31 Des. 2016,-,2,1,-,-,2,2,-
+Vallbona,Barri,31 Des. 2019,-,1,1,-,-,2,2,-
+Vallbona,Barri,31 Des. 2022,-,1,1,-,-,2,3,-
+Vallbona,Barri,31 Des. 2024,-,1,1,-,-,2,2,-
+la Trinitat Vella,Barri,31 Des. 2014,-,8,-,5,1,3,23,1
+la Trinitat Vella,Barri,31 Des. 2016,2,6,3,4,3,4,28,2
+la Trinitat Vella,Barri,31 Des. 2019,2,8,6,3,3,4,31,2
+la Trinitat Vella,Barri,31 Des. 2022,2,6,4,3,3,4,27,3
+la Trinitat Vella,Barri,31 Des. 2024,1,5,5,2,4,3,28,3
+Baró de Viver,Barri,31 Des. 2014,-,3,-,1,-,-,6,-
+Baró de Viver,Barri,31 Des. 2016,-,4,3,-,-,-,6,1
+Baró de Viver,Barri,31 Des. 2019,-,4,3,-,-,-,6,1
+Baró de Viver,Barri,31 Des. 2022,-,3,3,-,-,-,9,2
+Baró de Viver,Barri,31 Des. 2024,-,3,3,-,-,-,8,2
+el Bon Pastor,Barri,31 Des. 2014,-,7,-,6,3,11,47,5
+el Bon Pastor,Barri,31 Des. 2016,2,8,6,8,7,33,91,3
+el Bon Pastor,Barri,31 Des. 2019,3,8,5,8,5,38,102,3
+el Bon Pastor,Barri,31 Des. 2022,4,8,5,5,9,45,102,5
+el Bon Pastor,Barri,31 Des. 2024,5,8,5,5,12,42,102,5
+Sant Andreu,Districte,31 Des. 2014,21,59,7,34,25,40,229,71
+Sant Andreu,Districte,31 Des. 2016,24,77,23,48,12,44,233,72
+Sant Andreu,Districte,31 Des. 2019,31,93,21,37,23,44,243,86
+Sant Andreu,Districte,31 Des. 2022,27,91,20,33,20,43,232,92
+Sant Andreu,Districte,31 Des. 2024,31,89,21,29,25,40,228,104
+la Sagrera,Barri,31 Des. 2014,8,40,7,24,9,18,105,29
+la Sagrera,Barri,31 Des. 2016,5,35,13,18,1,23,100,18
+la Sagrera,Barri,31 Des. 2019,10,35,17,15,3,19,108,22
+la Sagrera,Barri,31 Des. 2022,10,39,15,14,2,17,106,26
+la Sagrera,Barri,31 Des. 2024,11,43,14,11,2,16,100,28
+el Congrés i els Indians,Barri,31 Des. 2014,3,31,3,8,10,24,77,12
+el Congrés i els Indians,Barri,31 Des. 2016,10,29,8,10,7,25,75,16
+el Congrés i els Indians,Barri,31 Des. 2019,14,30,5,9,7,23,85,22
+el Congrés i els Indians,Barri,31 Des. 2022,14,29,5,7,2,24,83,21
+el Congrés i els Indians,Barri,31 Des. 2024,13,31,5,8,5,23,82,24
+Navas,Barri,31 Des. 2014,5,10,1,7,13,23,79,10
+Navas,Barri,31 Des. 2016,8,10,4,10,4,20,86,10
+Navas,Barri,31 Des. 2019,12,14,4,6,5,28,96,15
+Navas,Barri,31 Des. 2022,11,16,4,7,4,28,92,16
+Navas,Barri,31 Des. 2024,12,17,4,6,5,29,95,17
+el Camp de l'Arpa del Clot,Barri,31 Des. 2014,16,40,-,35,27,49,194,23
+el Camp de l'Arpa del Clot,Barri,31 Des. 2016,16,30,16,31,20,43,187,33
+el Camp de l'Arpa del Clot,Barri,31 Des. 2019,22,37,13,23,19,41,204,42
+el Camp de l'Arpa del Clot,Barri,31 Des. 2022,20,34,13,16,11,41,190,44
+el Camp de l'Arpa del Clot,Barri,31 Des. 2024,23,38,14,12,7,45,198,55
+el Clot,Barri,31 Des. 2014,8,28,-,24,11,15,132,9
+el Clot,Barri,31 Des. 2016,9,29,10,20,11,15,130,10
+el Clot,Barri,31 Des. 2019,16,37,10,14,11,19,135,14
+el Clot,Barri,31 Des. 2022,15,37,12,12,11,19,138,18
+el Clot,Barri,31 Des. 2024,11,33,12,11,11,16,134,21
+el Parc i la Llacuna del Poblenou,Barri,31 Des. 2014,1,21,3,10,13,52,136,5
+el Parc i la Llacuna del Poblenou,Barri,31 Des. 2016,5,21,23,11,5,29,151,6
+el Parc i la Llacuna del Poblenou,Barri,31 Des. 2019,4,26,10,7,4,29,169,8
+el Parc i la Llacuna del Poblenou,Barri,31 Des. 2022,4,27,8,7,4,23,172,11
+el Parc i la Llacuna del Poblenou,Barri,31 Des. 2024,8,26,7,7,5,19,185,11
+la Vila Olímpica del Poblenou,Barri,31 Des. 2014,5,19,3,12,5,4,51,5
+la Vila Olímpica del Poblenou,Barri,31 Des. 2016,7,19,17,14,2,5,119,12
+la Vila Olímpica del Poblenou,Barri,31 Des. 2019,10,26,4,11,1,7,111,9
+la Vila Olímpica del Poblenou,Barri,31 Des. 2022,8,27,4,5,2,5,92,15
+la Vila Olímpica del Poblenou,Barri,31 Des. 2024,5,26,4,5,2,4,79,17
+el Poblenou,Barri,31 Des. 2014,15,46,4,41,17,42,273,24
+el Poblenou,Barri,31 Des. 2016,23,47,16,33,9,35,264,37
+el Poblenou,Barri,31 Des. 2019,24,66,29,26,13,32,301,50
+el Poblenou,Barri,31 Des. 2022,22,66,24,24,10,31,270,46
+el Poblenou,Barri,31 Des. 2024,19,71,25,15,11,31,293,52
+Diagonal Mar i el Front Marítim del Poblenou,Barri,31 Des. 2014,9,12,-,13,2,4,72,7
+Diagonal Mar i el Front Marítim del Poblenou,Barri,31 Des. 2016,7,14,7,14,2,2,117,11
+Diagonal Mar i el Front Marítim del Poblenou,Barri,31 Des. 2019,5,18,6,9,2,3,127,12
+Diagonal Mar i el Front Marítim del Poblenou,Barri,31 Des. 2022,9,15,6,10,3,2,123,11
+Diagonal Mar i el Front Marítim del Poblenou,Barri,31 Des. 2024,11,15,6,9,3,4,121,18
+el Besòs i el Maresme,Barri,31 Des. 2014,5,12,-,12,3,7,71,5
+el Besòs i el Maresme,Barri,31 Des. 2016,5,16,5,12,1,12,76,8
+el Besòs i el Maresme,Barri,31 Des. 2019,5,15,7,8,1,7,86,12
+el Besòs i el Maresme,Barri,31 Des. 2022,7,16,4,6,2,6,82,13
+el Besòs i el Maresme,Barri,31 Des. 2024,9,16,3,6,3,8,87,10
+Provençals del Poblenou,Barri,31 Des. 2014,4,23,2,12,5,30,88,13
+Provençals del Poblenou,Barri,31 Des. 2016,7,19,4,14,11,25,86,16
+Provençals del Poblenou,Barri,31 Des. 2019,6,23,4,9,3,21,90,18
+Provençals del Poblenou,Barri,31 Des. 2022,6,25,2,5,6,23,90,19
+Provençals del Poblenou,Barri,31 Des. 2024,6,26,1,5,6,22,93,21
+Sant Martí de Provençals,Barri,31 Des. 2014,10,27,-,15,13,8,98,19
+Sant Martí de Provençals,Barri,31 Des. 2016,11,30,11,13,12,11,98,20
+Sant Martí de Provençals,Barri,31 Des. 2019,15,36,14,9,12,14,101,27
+Sant Martí de Provençals,Barri,31 Des. 2022,16,33,15,7,9,14,100,27
+Sant Martí de Provençals,Barri,31 Des. 2024,17,37,13,7,9,14,98,26
+la Verneda i la Pau,Barri,31 Des. 2014,10,13,1,18,5,18,113,12
+la Verneda i la Pau,Barri,31 Des. 2016,13,20,8,14,14,27,108,14
+la Verneda i la Pau,Barri,31 Des. 2019,11,23,9,14,22,33,116,23
+la Verneda i la Pau,Barri,31 Des. 2022,10,22,9,12,21,32,105,22
+la Verneda i la Pau,Barri,31 Des. 2024,11,22,6,11,18,35,112,23

@@ -1,0 +1,7 @@
+Enllaç de l'aplicació: https://portaldades.ajuntament.barcelona.cat/ca/estad%C3%ADstiques/fsokzddxhd
+Títol: Nombre de locals comercials actius per sector d’activitat i grup d’activitat
+Unitat: Nombre
+Data de publicació : 2025-02-14T09:02:33Z
+Llicència: CC BY 4.0
+Tipus Filtre -> Temps: Dia; Territori: Barri
+Filtres -> Sector activitat: undefined

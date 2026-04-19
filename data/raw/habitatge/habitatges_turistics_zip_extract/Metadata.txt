@@ -1,0 +1,7 @@
+Enllaç de l'aplicació: https://portaldades.ajuntament.barcelona.cat/ca/estad%C3%ADstiques/z1wuyvykvf
+Títol: Nombre d’habitatges d’ús turístic
+Unitat: Nombre
+Data de publicació : 2025-02-13T11:56:55Z
+Llicència: CC BY 4.0
+Nota: No s’inclouen habitatges que no estiguin geolocalitzats
+Tipus Filtre -> Temps: Dia; Territori: Barri

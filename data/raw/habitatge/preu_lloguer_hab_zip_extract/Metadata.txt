@@ -1,0 +1,7 @@
+Enllaç de l'aplicació: https://portaldades.ajuntament.barcelona.cat/ca/estad%C3%ADstiques/5ibudgqbrb
+Títol: Preu mitjà per superfície (€/m²) del lloguer d'habitatges
+Unitat: Mitjana
+Data de publicació : 2026-02-23T10:00:31Z
+Llicència: CC BY 4.0
+Nota: La informació de districtes i barris està elaborada a partir d'aquells habitatges que s'han pogut geolocalitzar. El total de Barcelona pot no coincidir amb la suma de compravendes dels districtes o dels barris. No es publica la informació dels àmbits on hi ha menys de sis contractes registrats.
+Tipus Filtre -> Temps: Any; Territori: Barri
