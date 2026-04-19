@@ -28,7 +28,13 @@ S' han integrat diferents fonts de dades de tipologia socio econòmica i d' habi
 - **Població per nivell d'estudis i nacionalitat (Espanya, Resta UE i Resta del Món) per barri:**
 - **Població per grup d'edat i nacionalitat (Espanya, Resta UE i Resta del Món) per Barri:**  
 ## Dades Econòmiques
-- **Renda neta Mitjana per Persona i barri:** [Idescat](https://opendata-ajuntament.barcelona.cat/data/ca/dataset/renda-tributaria-per-persona-atlas-distribucio)
-- **Index Gini per barri:** [Idescat](https://opendata-ajuntament.barcelona.cat/data/ca/dataset/atles-renda-index-gini)
+- **Renda neta Mitjana per Persona i barri:** [Open Data](https://opendata-ajuntament.barcelona.cat/data/ca/dataset/renda-tributaria-per-persona-atlas-distribucio)
+- **Index Gini per barri:** [Open Data](https://opendata-ajuntament.barcelona.cat/data/ca/dataset/atles-renda-index-gini)
 ## Dades Urbanes
+- **Incidents per barri:** [Portal de dades Barcelona](https://portaldades.ajuntament.barcelona.cat/ca/microdades/8181e647-083e-48ec-b8a3-68b25b91ab83)
+- **Nombre de locals comercials actius per sector d’activitat i grup d’activitat:**  [Portal de dades Barcelona](Nombre de locals comercials actius per sector d’activitat i grup d’activitat)
+## Dades Habitatge
+- **Preu mitjà per superfície (€/m²) del lloguer d'habitatges:** [Portal de dades Barcelona](https://portaldades.ajuntament.barcelona.cat/ca/estad%C3%ADstiques/5ibudgqbrb)
+- **Nombre d’habitatges d’ús turístic:** [Portal de dades Barcelona](https://portaldades.ajuntament.barcelona.cat/ca/estad%C3%ADstiques/z1wuyvykvf)
+- **Nombre dels locals d'habitatge segons superfície de la ciutat de Barcelona:** [Portal de dades Barcelona](Nombre dels locals d'habitatge segons superfície de la ciutat de Barcelona)
 # EDA - Exploratory Data Analysis
