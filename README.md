@@ -32,14 +32,3 @@ S' han integrat diferents fonts de dades de tipologia socio econòmica i d' habi
 - **Index Gini per barri:** [Idescat](https://opendata-ajuntament.barcelona.cat/data/ca/dataset/atles-renda-index-gini)
 ## Dades Urbanes
 # EDA - Exploratory Data Analysis
-### Renda
-![Distribucions de la Renda Mitja](/results/figs/distribucio_renda.png)
-
-**Observacions:**
-### índex de Gini
-![Distribucions de Gini](/results/figs/distribucio_gini.png)
-
-**Observacions:**
-
-### Tendències Renda i Gini
-![Comparacions](/results/figs/renda_gini_scatter.png)
