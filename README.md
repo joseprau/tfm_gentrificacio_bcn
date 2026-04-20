@@ -10,6 +10,8 @@ Treball de fi de Master centrat en la gentrificació als barris de Barcelona.
 ├── notebooks
 │   └── ingestio_demografiques.ipynb
 │   └── ingestio_economiques.ipynb
+│   └── ingestio_urbanes.ipynb
+│   └── ingestio_habitatge.ipynb
 ├── src
 │   └── utils.py
 │   └── __init__.py
