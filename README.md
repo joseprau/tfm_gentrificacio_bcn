@@ -12,6 +12,8 @@ Treball de fi de Master centrat en la gentrificació als barris de Barcelona.
 │   └── ingestio_economiques.ipynb
 │   └── ingestio_urbanes.ipynb
 │   └── ingestio_habitatge.ipynb
+│   └── feature_engineering.ipynb
+│   └── eda.ipynb
 ├── src
 │   └── utils.py
 │   └── __init__.py
@@ -39,4 +41,13 @@ S' han integrat diferents fonts de dades de tipologia socio econòmica i d' habi
 - **Preu mitjà per superfície (€/m²) del lloguer d'habitatges:** [Portal de dades Barcelona](https://portaldades.ajuntament.barcelona.cat/ca/estad%C3%ADstiques/5ibudgqbrb)
 - **Nombre d’habitatges d’ús turístic:** [Portal de dades Barcelona](https://portaldades.ajuntament.barcelona.cat/ca/estad%C3%ADstiques/z1wuyvykvf)
 - **Nombre dels locals d'habitatge segons superfície de la ciutat de Barcelona:** [Portal de dades Barcelona](https://portaldades.ajuntament.barcelona.cat/ca/microdades/e2424d15-fdb6-4bae-b7ac-4be2a9886790)
-# EDA - Exploratory Data Analysis
+# EDA - Validació de les dades
+Es realitza una exploració de les dades focalitzada en les seves estructures i distribucions. No s' ha posat el focus en un anàlisi descriptiva, ja que es durà a terme després d' aplicar els models de clustering. En aquest cas, en una primera iteració després de crear els conjunts de dades finals en el notebook [feature_engineering.ipynb](notebooks/feature_engineering.ipynb) s' ha executat el notebook [eda.ipynb](notebooks/eda.ipynb) i s' han detectat les següents problemàtiques:
+
+|         aspecte        | estat    |   comentari                                                                |
+|:-----------------------|---------:|----------------------------------------------------------------------------|
+| df_2015 i df_2023          | valid |    No presenten nuls ni duplicats i mantenen una estructura sòlida per barri.     |
+| df_deltes        | revisar |    Hi ha NaN i inf en variables calculades com a canvis percentuals sobre bases inicials nul.les o inexistents.     |
+| Escala de variables   | revisar  |     Renda, gini, preu i taxes per 1000 hab treballen en escales diferents. Abans del clustering caldra escalar.    |
+| Outliers | revisar |    Algunes variables urbanes presenten cues llargues i outliers.Valorar si aplicar transofrmació logaritmica.     |
+
