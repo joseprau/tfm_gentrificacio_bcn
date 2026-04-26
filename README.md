@@ -50,6 +50,7 @@ Es realitza una exploració de les dades focalitzada en les seves estructures i 
 | df_deltes        | revisar |    Hi ha NaN i inf en variables calculades com a canvis percentuals sobre bases inicials nul.les o inexistents.     |
 | Escala de variables   | revisar  |     Renda, gini, preu i taxes per 1000 hab treballen en escales diferents. Abans del clustering caldra escalar.    |
 | Outliers | revisar |    Algunes variables urbanes presenten cues llargues i outliers.Valorar si aplicar transofrmació logaritmica.     |
+| Correlacions | revisar |    Algunes variables presenten una forta correlació entre elles, com és el cas de import_euros i pct_universitaris (0.88), pct_joves i pct_pob_estrangera (0.9), delta_pct_universitaris i delta_pct_pob_estrangera_occidental (0.87).     |
 
 Després de detectar els registres erronis en una primera execució del notebook [eda.ipynb](notebooks/eda.ipynb), s' han aplicat els canvis necessaris per tal de subsanar les dades. En aquest cas: 
 - Creació de dues funcions per calcular els deltes de manera robusta i tenint en compte valors nuls o 0 que causin nuls o infinits.
@@ -63,4 +64,5 @@ Un cop els canvis s' han aplicat, s' ha re-executat el notebook [eda.ipynb](note
 | df_deltes        | revisat |    Amb una funció més robusta s'han calculat els deltes i ah permès tractar aquells registres amb denominador 0 o nul.     |
 | Escala de variables   | revisat  |     L' estandarització de les dades es durà a terme en el notbook de modelatge.    |
 | Outliers | revisat |    La transformació logarítmica (si escau) es valorarà en la part de modelatge.     |
+| Correlacions | revisar |   Utilitzarem PCA per reduir dimensionalitat.    |
 
