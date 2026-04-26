@@ -14,6 +14,8 @@ Treball de fi de Master centrat en la gentrificació als barris de Barcelona.
 │   └── ingestio_habitatge.ipynb
 │   └── feature_engineering.ipynb
 │   └── eda.ipynb
+├── results
+│   └── figs
 ├── src
 │   └── utils.py
 │   └── __init__.py
