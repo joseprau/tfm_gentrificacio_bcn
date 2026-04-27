@@ -14,6 +14,7 @@ Treball de fi de Master centrat en la gentrificació als barris de Barcelona.
 │   └── ingestio_habitatge.ipynb
 │   └── feature_engineering.ipynb
 │   └── eda.ipynb
+│   └── modelling.ipynb
 ├── results
 │   └── figs
 ├── src
@@ -68,3 +69,16 @@ Un cop els canvis s' han aplicat, s' ha re-executat el notebook [eda.ipynb](note
 | Outliers | revisat |    La transformació logarítmica (si escau) es valorarà en la part de modelatge.     |
 | Correlacions | revisar |   Utilitzarem PCA per reduir dimensionalitat.    |
 
+
+ # Modelatge
+ ## Clusters 2015
+ ### PCA (Principal component analysis)
+ ![pca_2015](results/figs/variança_explicada_15.png)
+ 
+ **Observacions:**
+- Es pot observar que es necessiten els 5 principal components per explicar el 90% i 8 per explicar el 95%.
+ ### Selecció de K
+ ![seleccio_k_2015](results/figs/seleccio_k_2015.png)
+**Observacions:**
+- El nombre de clusters òptim són 3 o 5 clusters, en ambdós casos s'obté un bon valor de silhouette, i es pot considerar el colze en el gràfic de la inèrcia. 
+- El gràfic mostra també, que les dades amb pca aplicada, obtenen lleugerament millors resultats.
