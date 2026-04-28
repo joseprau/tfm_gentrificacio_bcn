@@ -69,16 +69,59 @@ Un cop els canvis s' han aplicat, s' ha re-executat el notebook [eda.ipynb](note
 | Outliers | revisat |    La transformació logarítmica (si escau) es valorarà en la part de modelatge.     |
 | Correlacions | revisar |   Utilitzarem PCA per reduir dimensionalitat.    |
 
+# PCA (Principal Component Analisis)
+![pca_2015](results/figs/variança_explicada_15.png) 
+![pca_2023](results/figs/variança_explicada_23.png)
+![pca_deltes](results/figs/variança_explicada_deltes.png)
+
+**Resum:**
+| dataset | n_components | var_explicada |
+|:--------|-------------|---------------|
+| df_2015 |     8        |    95%       |
+| df_2023 |     8        |    95%       |
+| df_2023 |     9        |    95%       |
 
  # Modelatge
- ## Clusters 2015
- ### PCA (Principal component analysis)
- ![pca_2015](results/figs/variança_explicada_15.png)
- 
- **Observacions:**
-- Es pot observar que es necessiten els 5 principal components per explicar el 90% i 8 per explicar el 95%.
- ### Selecció de K
+ ## Selecció K 2015
+ #### KMeans
  ![seleccio_k_2015](results/figs/seleccio_k_2015.png)
 **Observacions:**
 - El nombre de clusters òptim són 3 o 5 clusters, en ambdós casos s'obté un bon valor de silhouette, i es pot considerar el colze en el gràfic de la inèrcia. 
 - El gràfic mostra també, que les dades amb pca aplicada, obtenen lleugerament millors resultats.
+#### Agglomerative Clustering
+![seleccio_k_2015_agg](results/figs/seleccio_k_2015_agg.png)
+**Observacions:**
+- Scores de silhouette similars a les obtingudes amb KMeans. En aquest cas, el nombre òptim de clusters és 3. 
+## Selecció K 2023
+ #### KMeans
+ ![seleccio_k_2023](results/figs/seleccio_k_2023.png)
+
+**Observacions:**
+- Els resultats són lleugerament més bons amb les dades reduïdes. En aquest cas, el nombre de clúster òptim es veu molt clar en el gràfic de silhouette (5 clusters).
+
+
+#### Agglomerative Clustering
+![seleccio_k_2023_agg](results/figs/seleccio_k_2023_agg.png)
+
+**Observacions:**
+- Nombre òptim de clusters es 5, tot i que amb 4 també s' obtenen bons resultats.
+- El valor de silhouette amb k = 5 és lleugerament superior al obtingut amb KMeans.
+## Selecció K deltes
+ #### KMeans
+ ![seleccio_k_deltes](results/figs/seleccio_k_deltes.png)
+
+**Observacions:**
+- Mentre que amb El mètode del colze, el nombre òptim de k és 4, en el gràfic dels valors de silhouette, k = 3 és el òptim, de fet k = 4 es redueix dràsticament el score. 
+#### Agglomerative Clustering
+![seleccio_k_deltes_agg](results/figs/seleccio_k_deltes_agg.png)
+
+**Observacions:**
+- Els resultats indiquen que el nombre de clusters optims per als deltes és de 2 o 3.
+- Els resultats són similars a KMeans.
+# Resum selecció de model i K
+
+| dataset | tipo dades | KMeans | Agglomerative |
+|:--------|------------|--------|---------------|
+|df_2015 | pca  | Amb k = 3 o K = 5 s' obtenen bons resultats de Silhouette i inercia. | Valors de silhouette similars als de KMeans, però en aquest cas k=3 obté els millors resultats, indicant més cohesió entre les instàncies dels clusters. |
+df_2023| pca |  Els resultats són lleugerament més bons amb les dades reduïdes. k=5 obté els valors de silhouette més alts. |k=5 obté molt bons resultats, tot i que k=3 obté uns resultats notables també.
+df_deltes | pca | En el gràfic de Silhouette es pot observar k=3 és el nombre de clusters òptim. | k=2 o k=3. |
