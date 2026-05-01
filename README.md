@@ -125,4 +125,43 @@ Un cop els canvis s' han aplicat, s' ha re-executat el notebook [eda.ipynb](note
 |df_2015 | pca  | k=3 |Tant per a KMeans com Agglomerative, i amb mètode de colze i valors de silhouette, el nombre òptim de cluster és k=3. Utilitzarem kmeans per interpretabilitat i coneixements ja que Agglomerative no millora substancialment el clustering.
 
 # Clusters 2015
+## Mapa Clusters
 ![clusters_2015](results/figs/clusters_15.png)
+
+## Estadístiques clusters
+
+|                                       |        Cluster 0 |  Cluster           1 |       Cluster     2 |
+|:--------------------------------------|-------------:|--------------:|-------------:|
+| poblacio_total                        | 29412.1      | 15953         | 25042.2      |
+| pct_pob_estrangera                    |     0.154681 |     0.132063  |     0.401387 |
+| pct_pob_estrangera_occidental         |     0.065206 |     0.0233761 |     0.162695 |
+| pct_joves                             |     0.274368 |     0.263019  |     0.3998   |
+| pct_universitaris                     |     0.325844 |     0.138924  |     0.264166 |
+| import_euros                          | 17606.9      | 11723.3       | 10615.8      |
+| index_gini                            |    35.2065   |    31.1519    |    37.9739   |
+| total_incidents_1000_hab              |    23.3421   |    52.4983    |    30.4572   |
+| locals_restauracio_1000_hab           |     6.33007  |     3.11778   |    19.0015   |
+| locals_sanitaris_1000_hab             |     1.08571  |     0.409403  |     0.323594 |
+| locals_serveis_professionals_1000_hab |     1.39396  |     0.828169  |     0.600092 |
+| preu_mitja_m2                         |    11.8433   |     8.99231   |    12.825    |
+| pisos_turistics_1000_hab              |     6.85932  |     0.607512  |     6.96934  |
+
+## Observacions
+Cluster 0
+- Barris amb rendes superiors, i percentatge d' universitaris superiors.
+- Percentatges de població estrangera moderat, i una població amb un percentatge d' universitaris alt. 
+- Preu de lloguer elevat, i proporció de pisos turístics elevada.
+- Englova barris consolidats com són Sarria, Sant Gervasi, Pedralves, més elitistes, amb barris més de classe mitjana però en processos de transformació, com és el cas de Poblenou, Sant Antoni, etc.
+
+Cluster 1
+- Inclou els barris de Nou Barris, Horta, Sant Andreu, etc.
+- Barris carateritzats per tenir rendes més baixes i un percentatge menor d' universitaris.
+- El preu de l' habitatge és menor i la proporció de pisos turístics és menor.
+- En general, barris perifèrics amb una forta presència de població treballadora sense indicis de gentrificació alta.
+
+Cluster 2
+- Inclou barris cèntrics i gentrificats, com el Raval, el Gòtic, la Barceloneta i el Born.
+- Barris turístics, amb rendes baixes, però amb un índex gini força alt, indicant desigualtats entre la mateixa població dels barris.
+- Alta densitat d' estrangers, i un teixit comercial focalitzat a restauració. 
+- Pressió immobiliaria, amb preu per m2 del lloguer elevat i proporció de pisos turístics elevada.
+
