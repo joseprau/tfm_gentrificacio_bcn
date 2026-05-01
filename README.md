@@ -123,6 +123,7 @@ Un cop els canvis s' han aplicat, s' ha re-executat el notebook [eda.ipynb](note
 | dataset | tipo dades | k | Comentari |
 |:--------|------------|----------|----------|
 |df_2015 | pca  | k=3 |Tant per a KMeans com Agglomerative, i amb mètode de colze i valors de silhouette, el nombre òptim de cluster és k=3. Utilitzarem kmeans per interpretabilitat i coneixements ja que Agglomerative no millora substancialment el clustering.
+|  df_2023 | pca        | k=4  | Resultats  de Silhouette similars per a KMeans i Agglomerative. El nombre de clusters, pot estar entre 2 i 4 segons silhouette en KMeans. EN base al mètode del colze, seleccionarem k=4 i analitzarem els resultats. |
 
 # Clusters 2015
 ## Mapa Clusters
@@ -165,3 +166,53 @@ Cluster 2
 - Alta densitat d' estrangers, i un teixit comercial focalitzat a restauració. 
 - Pressió immobiliaria, amb preu per m2 del lloguer elevat i proporció de pisos turístics elevada.
 
+# Clusters 2023
+
+## Mapa Clusters
+![clusters_2023](results/figs/clusters_23.png)
+
+## Estadístiques Clusters
+|                                       |             0 |             1 |             2 |            3 |
+|:--------------------------------------|--------------:|--------------:|--------------:|-------------:|
+| poblacio_total                        | 23798.1       | 33861.4       | 17477.2       | 26611.5      |
+| pct_pob_estrangera                    |     0.167663  |     0.261791  |     0.193395  |     0.513533 |
+| pct_pob_estrangera_occidental         |     0.0685891 |     0.0984038 |     0.0331555 |     0.16441  |
+| pct_joves                             |     0.238383  |     0.300125  |     0.255152  |     0.428441 |
+| pct_universitaris                     |     0.424067  |     0.378786  |     0.191487  |     0.30791  |
+| import_euros                          | 27788.4       | 20775.3       | 15475.1       | 14977.9      |
+| index_gini                            |    36.2779    |    32.4586    |    28.8087    |    35.6601   |
+| total_incidents_1000_hab              |    31.2712    |    23.4096    |    55.0077    |    30.3184   |
+| locals_restauracio_1000_hab           |     4.49298   |     8.84778   |     3.17971   |    14.7237   |
+| locals_sanitaris_1000_hab             |     2.16051   |     1.34357   |     0.694303  |     0.515284 |
+| locals_serveis_professionals_1000_hab |     0.637956  |     1.06809   |     1.16425   |     0.185438 |
+| preu_mitja_m2                         |    17.1818    |    16.8529    |    13.5829    |    17.175    |
+| pisos_turistics_1000_hab              |     2.88351   |    10.2105    |     0.740882  |     6.27533  |
+
+## Observacions
+Cluster 0
+- Barris amb rendes elevades (27k) i un alt percentatge de població amb estudis superiors.
+- Percentatge de població estrangera baix.
+- Preu del lloguer elevat, però amb menor pes de l’activitat turística.
+- Engloba barris elitistes i consolidats com Sarrià, Pedralbes o Sant Gervasi.
+
+Cluster 1
+- Inclou barris com Eixample, Gràcia, Poblenou o Sant Antoni.
+- Barris amb rendes mitjanes-altes i alt nivell educatiu.
+- Elevada presència de restauració i pisos turístics, indicant dinamisme econòmic.
+- Percentatge d’estrangers i joves relativament alt.
+- Representa barris en procés actiu de transformació urbana i gentrificació amb preus de lloguer elevats.
+
+Cluster 2
+- Inclou barris de Nou Barris, Horta, Sant Andreu, entre altres.
+- Barris amb rendes més baixes i menor percentatge d’universitaris.
+- Preu de l’habitatge més baix i baixa presència de pisos turístics.
+- Major incidència d’indicadors de vulnerabilitat social.
+- Representa barris perifèrics amb poca pressió gentrificadora.
+
+Cluster 3
+- Inclou barris cèntrics com Raval, Gòtic, Barceloneta i el Born.
+- Alta densitat de població estrangera, especialment internacional (50%!!).
+- Fort pes de la restauració i activitat turística.
+- Preus elevats i alta proporció de pisos turístics.
+- Rendes mitjanes-baixes però amb índex de Gini elevat, indicant desigualtat.
+- Representa una gentrificació intensa de caràcter turístic.
