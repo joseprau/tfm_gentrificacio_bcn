@@ -120,15 +120,9 @@ Un cop els canvis s' han aplicat, s' ha re-executat el notebook [eda.ipynb](note
 - Els resultats són similars a KMeans.
 # Resum selecció de model i K
 
-| dataset | tipo dades | KMeans | Agglomerative |
-|:--------|------------|--------|---------------|
-|df_2015 | pca  | Amb k = 3 o K = 5 s' obtenen bons resultats de Silhouette i inercia. | Valors de silhouette similars als de KMeans, però en aquest cas k=3 obté els millors resultats, indicant més cohesió entre les instàncies dels clusters. |
-df_2023| pca |  Els resultats són lleugerament més bons amb les dades reduïdes. k=5 obté els valors de silhouette més alts. |k=5 obté molt bons resultats, tot i que k=3 obté uns resultats notables també.
-df_deltes | pca | En el gràfic de Silhouette es pot observar k=3 és el nombre de clusters òptim. | k=2 o k=3. |
+| dataset | tipo dades | k | Comentari |
+|:--------|------------|----------|----------|
+|df_2015 | pca  | k=3 |Tant per a KMeans com Agglomerative, i amb mètode de colze i valors de silhouette, el nombre òptim de cluster és k=3. Utilitzarem kmeans per interpretabilitat i coneixements ja que Agglomerative no millora substancialment el clustering.
 
-## Conclusions
-Es detecten diferents nombres de clusters per als diferents datasets. Després d' un anàlisi inicial dels clusters, s' ha arribat a la conclusió que per simplicitat i comparibilitat s' utilitzarà k=3 per a la creació dels clústers.
-
-En referència al model utilitzat, tot i que el model *AgglomerativeClustering* obté resultats de silhouettes lleugerament superiors, no són lo suficientment millors per descartar *KMeans* i les seves avantatges, com poder predir el cluster d' una nova instància. 
-
-Finalment, durant les experimentacions, s' ha vist com els models obtenien millors resultats amb les dades amb dimensionalitat reduïda (PCA aplicat) que les escalades. Tot i que pot dificultar la interpretabilitat dels clústers els resultats justifiquen aquesta pèrdua.
+# Clusters 2015
+![clusters_2015](results/figs/clusters_15.png)
