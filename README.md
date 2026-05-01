@@ -74,12 +74,6 @@ Un cop els canvis s' han aplicat, s' ha re-executat el notebook [eda.ipynb](note
 ![pca_2023](results/figs/variança_explicada_23.png)
 ![pca_deltes](results/figs/variança_explicada_deltes.png)
 
-**Resum:**
-| dataset | n_components | var_explicada |
-|:--------|-------------|---------------|
-| df_2015 |     8        |    95%       |
-| df_2023 |     8        |    95%       |
-| df_2023 |     9        |    95%       |
 
  # Modelatge
  ## Selecció K 2015
@@ -124,6 +118,7 @@ Un cop els canvis s' han aplicat, s' ha re-executat el notebook [eda.ipynb](note
 |:--------|------------|----------|----------|
 |df_2015 | pca  | k=3 |Tant per a KMeans com Agglomerative, i amb mètode de colze i valors de silhouette, el nombre òptim de cluster és k=3. Utilitzarem kmeans per interpretabilitat i coneixements ja que Agglomerative no millora substancialment el clustering.
 |  df_2023 | pca        | k=4  | Resultats  de Silhouette similars per a KMeans i Agglomerative. El nombre de clusters, pot estar entre 2 i 4 segons silhouette en KMeans. EN base al mètode del colze, seleccionarem k=4 i analitzarem els resultats. |
+| deltes | pca  | k = 3          |  Ambós tècniques indiquen que k=3 és el nombre òptim de k. Per homogenitzar, utilitzarem KMeans com en la resta.|
 
 # Clusters 2015
 ## Mapa Clusters
@@ -216,3 +211,26 @@ Cluster 3
 - Preus elevats i alta proporció de pisos turístics.
 - Rendes mitjanes-baixes però amb índex de Gini elevat, indicant desigualtat.
 - Representa una gentrificació intensa de caràcter turístic.
+
+# Clusters Deltes
+## Mapa Clusters
+![clusters_deltes](results/figs/clusters_deltes.png)
+
+## Estadístiques clusters
+|                                       |             0 |             1 |             2 |            3 |
+|:--------------------------------------|--------------:|--------------:|--------------:|-------------:|
+| poblacio_total                        | 23798.1       | 33861.4       | 17477.2       | 26611.5      |
+| pct_pob_estrangera                    |     0.167663  |     0.261791  |     0.193395  |     0.513533 |
+| pct_pob_estrangera_occidental         |     0.0685891 |     0.0984038 |     0.0331555 |     0.16441  |
+| pct_joves                             |     0.238383  |     0.300125  |     0.255152  |     0.428441 |
+| pct_universitaris                     |     0.424067  |     0.378786  |     0.191487  |     0.30791  |
+| import_euros                          | 27788.4       | 20775.3       | 15475.1       | 14977.9      |
+| index_gini                            |    36.2779    |    32.4586    |    28.8087    |    35.6601   |
+| total_incidents_1000_hab              |    31.2712    |    23.4096    |    55.0077    |    30.3184   |
+| locals_restauracio_1000_hab           |     4.49298   |     8.84778   |     3.17971   |    14.7237   |
+| locals_sanitaris_1000_hab             |     2.16051   |     1.34357   |     0.694303  |     0.515284 |
+| locals_serveis_professionals_1000_hab |     0.637956  |     1.06809   |     1.16425   |     0.185438 |
+| preu_mitja_m2                         |    17.1818    |    16.8529    |    13.5829    |    17.175    |
+| pisos_turistics_1000_hab              |     2.88351   |    10.2105    |     0.740882  |     6.27533  |
+
+## Observacions
