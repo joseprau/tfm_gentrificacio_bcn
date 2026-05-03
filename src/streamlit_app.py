@@ -34,15 +34,17 @@ def main():
 
     df_sel = datasets[periode_seleccionat].copy()
     gdf = prepare_geodata(df_sel, dim_barris)
-
-    plot_cluster_map(gdf, periode_seleccionat)
-
     num_cols = get_numeric_columns(df_sel)
-    show_cluster_profile(df_sel, num_cols)
-    
-    show_neighborhood_detail(gdf)
-    
-    show_cluster_bar_chart(df_sel)
+
+    left_col, right_col = st.columns([1.1, 0.9], gap="large")
+
+    with left_col:
+        plot_cluster_map(gdf, periode_seleccionat)
+        show_cluster_profile(df_sel, num_cols)
+
+    with right_col:
+        show_neighborhood_detail(gdf)
+        show_cluster_bar_chart(df_sel)
 
 
 if __name__ == "__main__":
