@@ -99,3 +99,43 @@ def show_neighborhood_detail(gdf: gpd.GeoDataFrame) -> None:
     )
     st.dataframe(detail, use_container_width=True, hide_index=True)
 
+
+
+def show_cluster_bar_chart(df: pd.DataFrame) -> None:
+    st.subheader("Comparacio de mitjanes per cluster")
+
+    if "cluster" not in df.columns:
+        st.warning("No es pot fer el grafic: falta la columna cluster.")
+        return
+
+    numeric_cols = get_numeric_columns(df)
+    if not numeric_cols:
+        st.info("No hi ha variables numeriques disponibles per comparar.")
+        return
+
+    selected_variable = st.selectbox(
+        "Variable per comparar",
+        numeric_cols
+    )
+    chart_data = (
+        df.groupby("cluster", dropna=False)[selected_variable]
+        .mean()
+        .reset_index()
+        .sort_values("cluster")
+    )
+    chart_data["cluster_label"] = "Cluster " + chart_data["cluster"].astype(str)
+
+    fig = px.bar(
+        chart_data,
+        x="cluster_label",
+        y=selected_variable,
+        color="cluster_label",
+        text_auto=".3f",
+        labels={
+            "cluster_label": "Cluster",
+            selected_variable: selected_variable,
+        },
+        title=f"Mitjana de {selected_variable} per cluster",
+    )
+    fig.update_layout(showlegend=False, xaxis_title=None, yaxis_title=None)
+    st.plotly_chart(fig, use_container_width=True)

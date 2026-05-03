@@ -6,7 +6,7 @@ from shapely import wkt
 
 from utils.ingesta_dades import load_data, load_dim_barris
 from utils.transformacions import prepare_geodata, get_numeric_columns
-from utils.visualitzacio import plot_cluster_map, show_cluster_profile, show_neighborhood_detail
+from utils.visualitzacio import plot_cluster_map, show_cluster_profile, show_neighborhood_detail, show_cluster_bar_chart
 
 def main():
 
@@ -42,6 +42,7 @@ def main():
     
     show_neighborhood_detail(gdf)
     
+    show_cluster_bar_chart(df_sel)
 
 
 if __name__ == "__main__":
