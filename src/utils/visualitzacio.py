@@ -4,13 +4,14 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from utils.transformacions import get_numeric_columns
+from utils.transformacions import get_numeric_columns, get_label_data
 
 
 def plot_cluster_map(gdf: gpd.GeoDataFrame, selected_period: str) -> None:
 
     map_data = gdf.dropna(subset=["cluster"]).copy()
         
+    map_data["cap_nom_barri"] = map_data["nom_barri"].str.capitalize()
     map_data["cluster_label"] = "Cluster " + map_data["cluster"].astype(str)
     map_data["tooltip_cluster"] = map_data["cluster"].astype(str)
 
@@ -20,17 +21,22 @@ def plot_cluster_map(gdf: gpd.GeoDataFrame, selected_period: str) -> None:
         geojson=map_data.__geo_interface__,
         locations="codi_barri",
         featureidkey="properties.codi_barri",
-        color="cluster_label",
-        hover_name="nom_barri",
+        color="nom",
+        color_discrete_map=map_data.to_dict()["color"],
+        hover_name="cap_nom_barri",
         hover_data={
             "codi_barri": True,
-            "tooltip_cluster": True,
+            "tooltip_cluster": False,
             "cluster_label": False,
+            "cluster": True,
+            #"poblacio_total": True if "poblacio_total" in map_data.columns else False,
+            #"import_euros": True
+
         },
         mapbox_style="carto-positron",
         center={"lat": center.y, "lon": center.x},
         zoom=11,
-        opacity=0.72,
+        opacity=1,
         title=f"Clusters dels barris de Barcelona ({selected_period})",
     )
     fig.update_layout(
@@ -51,7 +57,7 @@ def show_cluster_profile(df: pd.DataFrame, numeric_cols: list) -> pd.DataFrame |
         return None
 
     profile = (
-        df[numeric_cols].groupby("cluster", dropna=False)
+        df.groupby("cluster", dropna=False)[numeric_cols]
         .mean()
         .round(3)
         .T
@@ -80,7 +86,7 @@ def show_neighborhood_detail(gdf: gpd.GeoDataFrame) -> None:
         return
 
     record = row.iloc[0]
-    cluster_value = record.get("cluster", "No disponible")
+    cluster_value = record.get("nom", "No disponible")
 
     col1, col2 = st.columns(2)
     col1.metric("Barri", record.get("nom_barri", selected_label))
@@ -118,18 +124,19 @@ def show_cluster_bar_chart(df: pd.DataFrame) -> None:
         numeric_cols
     )
     chart_data = (
-        df.groupby("cluster", dropna=False)[selected_variable]
+        df.groupby(["nom", "color"], dropna=False)[selected_variable]
         .mean()
         .reset_index()
-        .sort_values("cluster")
+        .sort_values("nom")
     )
-    chart_data["cluster_label"] = "Cluster " + chart_data["cluster"].astype(str)
+    
 
     fig = px.bar(
         chart_data,
-        x="cluster_label",
+        x="nom",
         y=selected_variable,
-        color="cluster_label",
+        color="nom",
+        color_discrete_map=chart_data.to_dict()["color"],
         text_auto=".3f",
         labels={
             "cluster_label": "Cluster",

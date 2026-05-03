@@ -1,61 +1,67 @@
 {
-  "perfils_2015": {
+  "2015": {
     "cluster_0": {
-      "id": 0,
+      "cluster_id": 0,
       "nom": "Perfil socioeconòmic alt",
       "descr": "Barris amb renda elevada, major percentatge de població universitària i preus de lloguer superiors a la mitjana.",
       "color": "#4575b4"
     },
     "cluster_1": {
-      "id": 1,
+      "cluster_id": 1,
       "nom": "Perfil vulnerable",
       "descr": "Barris amb rendes més baixes, menor nivell educatiu i menor pressió immobiliària i turística.",
       "color": "#d73027"
     },
     "cluster_2": {
-      "id": 2,
+      "cluster_id": 2,
       "nom": "Gentrificació turística intensa",
       "descr": "Barris amb valors intermedis en renda, educació, preu del lloguer i presència de població estrangera.",
       "color": "#fee08b"
     }
   },
-  "perfils_2023": {
+  "2023": {
     "cluster_0": {
-      "id": 0,
-      "nom": "Elit residencial consolidada",
+      "cluster_id": 0,
+      "nom": "Elit rescluster_idencial consolcluster_idada",
       "descr": "Barris amb rendes elevades, alt percentatge de població universitària i preus de lloguer alts, però amb menor pes de l'activitat turística.",
       "color": "#4575b4"
     },
     "cluster_1": {
-      "id": 1,
+      "cluster_id": 1,
       "nom": "Classe mitjana en transformació",
       "descr": "Barris amb rendes mitjanes-altes, alt nivell educatiu, presència rellevant de restauració i pisos turístics, associats a processos de transformació urbana.",
       "color": "#fee08b"
     },
     "cluster_2": {
-      "id": 2,
+      "cluster_id": 2,
       "nom": "Perifèria vulnerable",
       "descr": "Barris amb rendes més baixes, menor percentatge de població universitària, preus de lloguer inferiors i baixa presència de pisos turístics.",
       "color": "#d73027"
     },
     "cluster_3": {
-      "id": 3,
+      "cluster_id": 3,
       "nom": "Gentrificació turística intensa",
       "descr": "Barris cèntrics amb alta presència de població estrangera, població jove, restauració, pisos turístics i pressió immobiliària elevada.",
       "color": "#984ea3"
     }
   },
-  "perfils_deltes": {
+  "Deltes": {
     "cluster_0": {
-      "id": 0,
+      "cluster_id": 0,
       "nom": "Canvi moderat generalitzat",
       "descr": "Barris amb increments moderats en renda, preu del lloguer, població estrangera i altres indicadors, representant una dinàmica de canvi urbana més general.",
       "color": "#91cf60"
     },
     "cluster_1": {
-      "id": 1,
+      "cluster_id": 1,
       "nom": "Transformació urbana intensa",
       "descr": "Barris amb increments superiors en població, població estrangera, preu del lloguer, pisos turístics o activitat urbana, indicant dinàmiques recents més accelerades.",
+      "color": "#fc8d59"
+    },
+    "cluster_2": {
+      "cluster_id": 2,
+      "nom": "TBD",
+      "descr": "TBD",
       "color": "#fc8d59"
     }
   }

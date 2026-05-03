@@ -1,5 +1,6 @@
 import pandas as pd
 from pathlib import Path
+import json
 
 def load_data(base_dir: Path=Path("..")):
 
@@ -18,4 +19,7 @@ def load_dim_barris(base_dir: Path=Path("..")):
     return pd.read_csv( DATA_DIR / "BarcelonaCiutat_Barris.csv")
 
 
+def load_labels_config(base_dir: Path=Path("..")):
+    with open(base_dir / "clusters_config.json", "r") as f:
+        return json.load(f)
     
