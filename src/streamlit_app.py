@@ -20,7 +20,8 @@ def main():
     )
 
     st.title("Conglomerats i dinàmiques de gentrificació a Barcelona")
-    st.caption("Aplicació interactiva per explorar els resultats del clustering per barri.")
+    st.subheader("Aplicació interactiva per explorar els resultats del clustering per barri.")
+    st.caption("Autor: Josep Rau")
 
     
     datasets = load_data(BASE_DIR)
