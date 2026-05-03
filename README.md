@@ -7,6 +7,7 @@ Treball de fi de Master centrat en la gentrificació als barris de Barcelona.
 │   ├── processed
 │   ├── dimensions
 │   ├── modelling
+│   ├── modelling
 ├── notebooks
 │   └── ingestio_demografiques.ipynb
 │   └── ingestio_economiques.ipynb
@@ -18,14 +19,25 @@ Treball de fi de Master centrat en la gentrificació als barris de Barcelona.
 ├── results
 │   └── figs
 ├── src
-│   └── utils.py
-│   └── __init__.py
-├── env
+│   ├── .streamlit
+│      └── config.toml
+│   ├──utils
+│       └── __init__.py
+│       ├── config
+│          └── clusters_config.json
+│       └── utils.py
+│       └── ingesta_dades.py
+│       └── transformacions.py
+│       └── visualitzacio.py
+│   └── streamlit_app.py
 ├── requirements.txt
 ├── README.md
 ├── LICENSE
 └── .gitignore
 ```
+# Descripció
+L' objectiu d'aquest treball de fi de Master, és estudiar la gentrificació a Barcelona mitjançant tècniques de ML i crear una visualització interactiva per a representar els resultats obtinguts. Per la visualització interactiva, s' ha creat la següent [Appde Streamlit](https://tfmjraupogentrificacio.streamlit.app/).
+
 # Fonts
 S' han integrat diferents fonts de dades de tipologia socio econòmica i d' habitatge. En el procés d' ingesta i de preprocessament, s' han combinat per obtenir un dataset per construir el model de ML i un altre per enriquir l'anàlisi de dades.
 ## Dades Demogràfiques
