@@ -103,9 +103,6 @@ Un cop els canvis s' han aplicat, s' ha re-executat el notebook [eda.ipynb](note
 - Els resultats són lleugerament més bons amb les dades reduïdes. En aquest cas, el nombre de clúster òptim es veu molt clar en el gràfic de silhouette (5 clusters).
 
 
-**Observacions:**
-- Nombre òptim de clusters es 5, tot i que amb 4 també s' obtenen bons resultats.
-- El valor de silhouette amb k = 5 és lleugerament superior al obtingut amb KMeans.
 ## Selecció K deltes
  #### KMeans
  ![seleccio_k_deltes](results/figs/seleccio_k_deltes.png)
@@ -115,11 +112,10 @@ Un cop els canvis s' han aplicat, s' ha re-executat el notebook [eda.ipynb](note
 
 # Resum selecció de model i K
 
-| dataset | tipo dades | k | Comentari |
-|:--------|------------|----------|----------|
-|df_2015 | pca  | k=3 |Tant per a KMeans com Agglomerative, i amb mètode de colze i valors de silhouette, el nombre òptim de cluster és k=3. Utilitzarem kmeans per interpretabilitat i coneixements ja que Agglomerative no millora substancialment el clustering.
-|  df_2023 | pca        | k=4  | Resultats  de Silhouette similars per a KMeans i Agglomerative. El nombre de clusters, pot estar entre 2 i 4 segons silhouette en KMeans. EN base al mètode del colze, seleccionarem k=4 i analitzarem els resultats. |
-| deltes | pca  | k = 3          |  Ambós tècniques indiquen que k=3 és el nombre òptim de k. Per homogenitzar, utilitzarem KMeans com en la resta.|
+| dataset    | clusters   | model   | tipo_dades   | comentari                                                                                                                      |
+|---:|:-----------|:--------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------|
+|  df_2015 | k=3        | kmeans  | pca          | Tot i que k=3 és més simple i interpretable, k=4 ens permet diferenciar altres perfils de barris que amb k=3 queden barrejats. |
+|  df_2023 | k=4        | kmeans  | pca          | Segunt amb la conclusió de 2015, s’ha seleccionat una solució amb k=4 per una major diferenciació entre perfils urbans. |
 
 # Clusters 2015
 ## Mapa Clusters
@@ -129,7 +125,6 @@ Un cop els canvis s' han aplicat, s' ha re-executat el notebook [eda.ipynb](note
 
 |                                       |            0 |             1 |             2 |            3 |
 |:--------------------------------------|-------------:|--------------:|--------------:|-------------:|
-| codi_barri                            |     2.5      |    46.8       |    30         |    26.0769   |
 | poblacio_total                        | 25042.2      | 15813.5       | 35124.1       | 23846.6      |
 | pct_pob_estrangera                    |     0.401387 |     0.133358  |     0.175897  |     0.126322 |
 | pct_pob_estrangera_occidental         |     0.162695 |     0.0243489 |     0.0653282 |     0.06528  |
@@ -193,7 +188,6 @@ Cluster 3
 | locals_serveis_professionals_1000_hab |     0.637956  |     1.06809   |     1.16425   |     0.185438 |
 | preu_mitja_m2                         |    17.1818    |    16.8529    |    13.5829    |    17.175    |
 | pisos_turistics_1000_hab              |     2.88351   |    10.2105    |     0.740882  |     6.27533  |
-
 ## Observacions
 Cluster 0
 - Barris amb rendes elevades (27k) i un alt percentatge de població amb estudis superiors.
