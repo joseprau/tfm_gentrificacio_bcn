@@ -127,40 +127,50 @@ Un cop els canvis s' han aplicat, s' ha re-executat el notebook [eda.ipynb](note
 
 ## Estadístiques clusters
 
-|                                       |        Cluster 0 |  Cluster           1 |       Cluster     2 |
-|:--------------------------------------|-------------:|--------------:|-------------:|
-| poblacio_total                        | 29412.1      | 15953         | 25042.2      |
-| pct_pob_estrangera                    |     0.154681 |     0.132063  |     0.401387 |
-| pct_pob_estrangera_occidental         |     0.065206 |     0.0233761 |     0.162695 |
-| pct_joves                             |     0.274368 |     0.263019  |     0.3998   |
-| pct_universitaris                     |     0.325844 |     0.138924  |     0.264166 |
-| import_euros                          | 17606.9      | 11723.3       | 10615.8      |
-| index_gini                            |    35.2065   |    31.1519    |    37.9739   |
-| total_incidents_1000_hab              |    23.3421   |    52.4983    |    30.4572   |
-| locals_restauracio_1000_hab           |     6.33007  |     3.11778   |    19.0015   |
-| locals_sanitaris_1000_hab             |     1.08571  |     0.409403  |     0.323594 |
-| locals_serveis_professionals_1000_hab |     1.39396  |     0.828169  |     0.600092 |
-| preu_mitja_m2                         |    11.8433   |     8.99231   |    12.825    |
-| pisos_turistics_1000_hab              |     6.85932  |     0.607512  |     6.96934  |
+|                                       |            0 |             1 |             2 |            3 |
+|:--------------------------------------|-------------:|--------------:|--------------:|-------------:|
+| codi_barri                            |     2.5      |    46.8       |    30         |    26.0769   |
+| poblacio_total                        | 25042.2      | 15813.5       | 35124.1       | 23846.6      |
+| pct_pob_estrangera                    |     0.401387 |     0.133358  |     0.175897  |     0.126322 |
+| pct_pob_estrangera_occidental         |     0.162695 |     0.0243489 |     0.0653282 |     0.06528  |
+| pct_joves                             |     0.3998   |     0.263827  |     0.295617  |     0.246601 |
+| pct_universitaris                     |     0.264166 |     0.141535  |     0.287426  |     0.379472 |
+| import_euros                          | 10615.8      | 11779.6       | 15063.1       | 21017.1      |
+| index_gini                            |    37.9739   |    31.1895    |    33.9087    |    37        |
+| total_incidents_1000_hab              |    30.4572   |    52.0247    |    18.134     |    28.9664   |
+| locals_restauracio_1000_hab           |    19.0015   |     3.1218    |     7.17712   |     5.52229  |
+| locals_sanitaris_1000_hab             |     0.323594 |     0.425684  |     0.816629  |     1.41881  |
+| locals_serveis_professionals_1000_hab |     0.600092 |     0.826749  |     1.7243    |     1.03528  |
+| preu_mitja_m2                         |    12.825    |     9.05      |    11.2375    |    12.6308   |
+| pisos_turistics_1000_hab              |     6.96934  |     0.770706  |    10.01      |     2.96035  |
 
 ## Observacions
+
 Cluster 0
-- Barris amb rendes superiors, i percentatge d' universitaris superiors.
-- Percentatges de població estrangera moderat, i una població amb un percentatge d' universitaris alt. 
-- Preu de lloguer elevat, i proporció de pisos turístics elevada.
-- Englova barris consolidats com són Sarria, Sant Gervasi, Pedralves, més elitistes, amb barris més de classe mitjana però en processos de transformació, com és el cas de Poblenou, Sant Antoni, etc.
-
-Cluster 1
-- Inclou els barris de Nou Barris, Horta, Sant Andreu, etc.
-- Barris carateritzats per tenir rendes més baixes i un percentatge menor d' universitaris.
-- El preu de l' habitatge és menor i la proporció de pisos turístics és menor.
-- En general, barris perifèrics amb una forta presència de població treballadora sense indicis de gentrificació alta.
-
-Cluster 2
 - Inclou barris cèntrics i gentrificats, com el Raval, el Gòtic, la Barceloneta i el Born.
 - Barris turístics, amb rendes baixes, però amb un índex gini força alt, indicant desigualtats entre la mateixa població dels barris.
 - Alta densitat d' estrangers, i un teixit comercial focalitzat a restauració. 
-- Pressió immobiliaria, amb preu per m2 del lloguer elevat i proporció de pisos turístics elevada.
+- Pressió immobiliaria, amb preu per m2 del lloguer elevat i proporció de pisos turístics moderada.
+
+Cluster 1
+- Inclou els barris de Nou Barris, Horta, Sant Andreu, etc.
+- Barris carateritzats per tenir rendes més baixes i homogenees i un percentatge menor d' universitaris.
+- El preu de l' habitatge és menor i la proporció de pisos turístics és molt baix.
+- En general, barris perifèrics amb una forta presència de població treballadora sense indicis de gentrificació alta.
+
+Cluster 2 — gentrificació activa / barris en transformació
+- Inclou Sagrada Família, Sant Antoni, Poble-sec, Sants, Gràcia, Poblenou, etc.
+- Renda intermèdia, percentatge d’universitaris moderat-alt i molta presència de pisos turístics (10 per cada 1000 habitants).
+- Restauració elevada amb aguns locals orientats a ofici
+
+Cluster 3
+- Barris amb rendes superiors, i percentatge d' universitaris superiors.
+- Percentatges de població estrangera baix, i una població amb un percentatge d' universitaris alt. 
+- Preu de lloguer elevat, i proporció de pisos turístics baixa.
+- Englova barris consolidats com són Sarria, Sant Gervasi, Pedralves, més elitistes, amb barris més de classe mitjana però en processos de transformació, com és el cas de Poblenou, Sant Antoni, etc.
+
+
+
 
 # Clusters 2023
 
