@@ -94,10 +94,7 @@ Un cop els canvis s' han aplicat, s' ha re-executat el notebook [eda.ipynb](note
 **Observacions:**
 - El nombre de clusters òptim són 3 o 5 clusters, en ambdós casos s'obté un bon valor de silhouette, i es pot considerar el colze en el gràfic de la inèrcia. 
 - El gràfic mostra també, que les dades amb pca aplicada, obtenen lleugerament millors resultats.
-#### Agglomerative Clustering
-![seleccio_k_2015_agg](results/figs/seleccio_k_2015_agg.png)
-**Observacions:**
-- Scores de silhouette similars a les obtingudes amb KMeans. En aquest cas, el nombre òptim de clusters és 3. 
+
 ## Selecció K 2023
  #### KMeans
  ![seleccio_k_2023](results/figs/seleccio_k_2023.png)
@@ -105,9 +102,6 @@ Un cop els canvis s' han aplicat, s' ha re-executat el notebook [eda.ipynb](note
 **Observacions:**
 - Els resultats són lleugerament més bons amb les dades reduïdes. En aquest cas, el nombre de clúster òptim es veu molt clar en el gràfic de silhouette (5 clusters).
 
-
-#### Agglomerative Clustering
-![seleccio_k_2023_agg](results/figs/seleccio_k_2023_agg.png)
 
 **Observacions:**
 - Nombre òptim de clusters es 5, tot i que amb 4 també s' obtenen bons resultats.
@@ -118,12 +112,7 @@ Un cop els canvis s' han aplicat, s' ha re-executat el notebook [eda.ipynb](note
 
 **Observacions:**
 - Mentre que amb El mètode del colze, el nombre òptim de k és 4, en el gràfic dels valors de silhouette, k = 3 és el òptim, de fet k = 4 es redueix dràsticament el score. 
-#### Agglomerative Clustering
-![seleccio_k_deltes_agg](results/figs/seleccio_k_deltes_agg.png)
 
-**Observacions:**
-- Els resultats indiquen que el nombre de clusters optims per als deltes és de 2 o 3.
-- Els resultats són similars a KMeans.
 # Resum selecció de model i K
 
 | dataset | tipo dades | k | Comentari |
