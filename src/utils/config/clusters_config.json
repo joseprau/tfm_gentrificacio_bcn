@@ -2,22 +2,29 @@
   "2015": {
     "cluster_0": {
       "cluster_id": 0,
-      "nom": "Perfil socioeconòmic alt",
-      "descr": "Barris amb renda elevada, major percentatge de població universitària i preus de lloguer superiors a la mitjana.",
-      "color": "#4575b4"
+      "nom": "Gentrificació turística intensa",
+      "descr": "Barris amb valors intermedis en renda, educació, preu del lloguer i presència de població estrangera.",
+      "color": "#984ea3"
     },
     "cluster_1": {
       "cluster_id": 1,
-      "nom": "Perfil vulnerable",
+      "nom": "Baix nivell de gentrificació",
       "descr": "Barris amb rendes més baixes, menor nivell educatiu i menor pressió immobiliària i turística.",
       "color": "#d73027"
     },
     "cluster_2": {
       "cluster_id": 2,
-      "nom": "Gentrificació turística intensa",
-      "descr": "Barris amb valors intermedis en renda, educació, preu del lloguer i presència de població estrangera.",
+      "nom": "Gentrificació activa / En procés",
+      "descr": "Perfil de barris en transformació, amb pressió residencial, turística i comercial.",
       "color": "#fee08b"
-    }
+    },
+    "cluster_3":
+      {
+        "cluster_id": 3,
+        "nom":"Barris consolidats sense gentrificació",
+        "descr": "Barris d'estatus socioeconòmic elevat, on la gentrificació no és provocada per estrangers ni turisme, sinó per factors residencials.",
+        "color": "#4575b4"
+      }
   },
   "2023": {
     "cluster_0": {
