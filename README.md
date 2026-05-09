@@ -82,41 +82,19 @@ Un cop els canvis s' han aplicat, s' ha re-executat el notebook [eda.ipynb](note
 | Correlacions | revisar |   Utilitzarem PCA per reduir dimensionalitat.    |
 
 # PCA (Principal Component Analisis)
-![pca_2015](results/figs/variança_explicada_15.png) 
-![pca_2023](results/figs/variança_explicada_23.png)
-![pca_deltes](results/figs/variança_explicada_deltes.png)
+| dataset    | n_components   | var_explicada   |   refs  |
+|-----------:|:---------------|:--------|:-------------|
+| df_2015 |8  | >= 0.95 | [pca_2015](results/figs/variança_explicada_15.png) |
+| df_2023 |8  | >= 0.95 | [pca_2023](results/figs/variança_explicada_23.png) |
+| df_2015 |11  | >= 0.95 | [pca_deltes](results/figs/variança_explicada_deltes.png) |
 
-
- # Modelatge
- ## Selecció K 2015
- #### KMeans
- ![seleccio_k_2015](results/figs/seleccio_k_2015.png)
-**Observacions:**
-- El nombre de clusters òptim són 3 o 5 clusters, en ambdós casos s'obté un bon valor de silhouette, i es pot considerar el colze en el gràfic de la inèrcia. 
-- El gràfic mostra també, que les dades amb pca aplicada, obtenen lleugerament millors resultats.
-
-## Selecció K 2023
- #### KMeans
- ![seleccio_k_2023](results/figs/seleccio_k_2023.png)
-
-**Observacions:**
-- Els resultats són lleugerament més bons amb les dades reduïdes. En aquest cas, el nombre de clúster òptim es veu molt clar en el gràfic de silhouette (5 clusters).
-
-
-## Selecció K deltes
- #### KMeans
- ![seleccio_k_deltes](results/figs/seleccio_k_deltes.png)
-
-**Observacions:**
-- Mentre que amb El mètode del colze, el nombre òptim de k és 4, en el gràfic dels valors de silhouette, k = 3 és el òptim, de fet k = 4 es redueix dràsticament el score. 
 
 # Resum selecció de model i K
-
-| dataset    | clusters   | model   | tipo_dades   | comentari                                                                                                                      |
-|---:|:-----------|:--------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------|
-|  df_2015 | k=3        | kmeans  | pca          | Tot i que k=3 és més simple i interpretable, k=4 ens permet diferenciar altres perfils de barris que amb k=3 queden barrejats. |
-|  df_2023 | k=4        | kmeans  | pca          | Segunt amb la conclusió de 2015, s’ha seleccionat una solució amb k=4 per una major diferenciació entre perfils urbans. |
-| df_deltes | k=3        | kmeans  | pca          | En ambdós casos, com hem vist abans k=4 és el que obté un valor més alt. No obstant, per simplicitat i interpretabilitat seleccionarem k=3, on hi ha un grup dominant i dos clusters més residuals / extrems. Mantenim amb PCA per homogeneïtat.|
+| dataset    | clusters   | model   | tipo_dades   | comentari                                                                                                                      |  refs  |
+|---:|:-----------|:--------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------|:-------|
+|  df_2015 | k=3        | kmeans  | pca          | Tot i que k=3 és més simple i interpretable, k=4 ens permet diferenciar altres perfils de barris que amb k=3 queden barrejats. | [Elbow Method](results/figs/seleccio_k_2015.png) i [Silhouettes](results/figs/silhouettes_2015.png) |
+|  df_2023 | k=4        | kmeans  | pca          | Segunt amb la conclusió de 2015, s’ha seleccionat una solució amb k=4 per una major diferenciació entre perfils urbans. | [Elbow Method](results/figs/seleccio_k_2023.png) i [Silhouettes](results/figs/silhouettes_2023.png) |
+| df_deltes | k=3        | kmeans  | pca          | En ambdós casos, com hem vist abans k=4 és el que obté un valor més alt. No obstant, per simplicitat i interpretabilitat seleccionarem k=3, on hi ha un grup dominant i dos clusters més residuals / extrems. Mantenim amb PCA per homogeneïtat.| [Elbow Method](results/figs/seleccio_k_deltes.png) i [Silhouettes](results/figs/silhouettes_deltes.png) |
 
 # Clusters 2015
 ## Mapa Clusters
