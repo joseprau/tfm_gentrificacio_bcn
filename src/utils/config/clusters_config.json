@@ -61,14 +61,14 @@
     },
     "cluster_1": {
       "cluster_id": 1,
-      "nom": "Transformació urbana intensa",
-      "descr": "Barris amb increments superiors en població, població estrangera, preu del lloguer, pisos turístics o activitat urbana, indicant dinàmiques recents més accelerades.",
+      "nom": "Outliers",
+      "descr": "Barris amb transformacions atípiques.",
       "color": "#fc8d59"
     },
     "cluster_2": {
       "cluster_id": 2,
-      "nom": "TBD",
-      "descr": "TBD",
+      "nom": "Canvis intensos amb pressió urbana",
+      "descr": "Barris amb transformació més intensa, però molt variats.",
       "color": "#fc8d59"
     }
   }
