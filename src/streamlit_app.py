@@ -6,7 +6,7 @@ import pandas as pd
 
 from utils.ingesta_dades import load_data, load_dim_barris, load_labels_config
 from utils.transformacions import prepare_geodata, get_numeric_columns, get_label_data
-from utils.visualitzacio import plot_cluster_map, show_heatmap, show_cluster_profile, show_neighborhood_detail, show_cluster_bar_chart
+from utils.visualitzacio import plot_cluster_map, show_heatmap, show_cluster_profile, show_neighborhood_detail, show_cluster_bar_chart, deltes_bar
 
 def main():
     
@@ -44,20 +44,28 @@ def main():
     gdf = prepare_geodata(df_sel, dim_barris)
     num_cols = get_numeric_columns(df_sel)
 
-    left_col, right_col = st.columns([1.1, 0.9], gap="large")
+    row1_1, row_1_2 = st.columns(2, vertical_alignment="top", border=True)
+    row_2_1, row_2_2 = st.columns(2, vertical_alignment="top", border=True)
 
-    with left_col:
+#    left_col, right_col = st.columns([1.1, 0.9], gap="large")
+
+    with row1_1:
         plot_cluster_map(gdf, periode_seleccionat)
+    with row_2_1:
         show_cluster_profile(df_sel, num_cols)
-        if periode_seleccionat == "Deltes":
-            show_heatmap(gdf)
-
-    with right_col:
+    with row_1_2:
         show_neighborhood_detail(gdf)
+    with row_2_2:
         show_cluster_bar_chart(df_sel)
-    
     if periode_seleccionat != "Deltes":
         show_heatmap(gdf)
+    else:
+        row_3_1, row_3_2 = st.columns(2, vertical_alignment="top", border=True)
+        with row_3_1:
+            show_heatmap(gdf)
+        with row_3_2:
+            deltes_bar(gdf)
+
         
 
 if __name__ == "__main__":

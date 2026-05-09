@@ -8,7 +8,7 @@ from utils.transformacions import get_numeric_columns, get_label_data
 
 
 def plot_cluster_map(gdf: gpd.GeoDataFrame, selected_period: str) -> None:
-
+    st.subheader(f"Clusters dels barris de Barcelona ({selected_period})")
     map_data = gdf.dropna(subset=["cluster"]).copy()
         
     map_data["cap_nom_barri"] = map_data["nom_barri"].str.capitalize()
@@ -36,8 +36,7 @@ def plot_cluster_map(gdf: gpd.GeoDataFrame, selected_period: str) -> None:
         mapbox_style="carto-positron",
         center={"lat": center.y, "lon": center.x},
         zoom=11,
-        opacity=1,
-        title=f"Clusters dels barris de Barcelona ({selected_period})",
+        opacity=1
     )
     fig.update_layout(
         margin={"r": 0, "t": 50, "l": 0, "b": 0},
@@ -61,7 +60,7 @@ def show_cluster_profile(df: pd.DataFrame, numeric_cols: list) -> pd.DataFrame |
         .T
         .reset_index()
     )
-    st.dataframe(profile, width='stretch', hide_index=True)
+    st.dataframe(profile, width='stretch', height="content", hide_index=True)
     return profile
 
 
@@ -101,7 +100,7 @@ def show_neighborhood_detail(gdf: gpd.GeoDataFrame) -> None:
         .dropna(subset=["valor"])
         .sort_values("variable")
     )
-    st.dataframe(detail, width='stretch', hide_index=True)
+    st.dataframe(detail, width='stretch', height="content", hide_index=True)
 
 
 
@@ -135,7 +134,7 @@ def show_cluster_bar_chart(df: pd.DataFrame) -> None:
         y=selected_variable,
         color="nom",
         color_discrete_map=chart_data.to_dict()["color"],
-        text_auto=".3f",
+        text_auto=".2f",
         labels={
             "cluster_label": "Cluster",
             selected_variable: selected_variable,
@@ -147,7 +146,7 @@ def show_cluster_bar_chart(df: pd.DataFrame) -> None:
 
 
 def show_heatmap(gdf: gpd.GeoDataFrame) -> None:
-    st.subheader("Heatmap de la variable seleccionada")
+    st.subheader("Heatmap")
 
     
     numeric_cols = get_numeric_columns(gdf)
@@ -192,4 +191,21 @@ def show_heatmap(gdf: gpd.GeoDataFrame) -> None:
         height=620,
     )
     fig.update_traces(marker_line_width=0.8, marker_line_color="white")
+    st.plotly_chart(fig, width='stretch')
+
+def deltes_bar(gdf):
+    st.subheader("Top 10 variables amb més variació")
+    numeric_cols = get_numeric_columns(gdf)
+
+    chart_data = (
+        gdf[numeric_cols].mean().reset_index(name="Valor").sort_values("Valor")
+    )
+    
+    fig = px.bar(
+        chart_data,
+        x="Valor",
+        y="index",
+        text_auto=".2f"
+    )
+    fig.update_layout(showlegend=False, xaxis_title=None, yaxis_title=None)
     st.plotly_chart(fig, width='stretch')
