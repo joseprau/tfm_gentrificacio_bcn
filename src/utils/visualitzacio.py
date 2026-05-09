@@ -45,9 +45,7 @@ def plot_cluster_map(gdf: gpd.GeoDataFrame, selected_period: str) -> None:
         height=620,
     )
     fig.update_traces(marker_line_width=0.8, marker_line_color="white")
-    st.plotly_chart(fig, use_container_width=True)
-
-
+    st.plotly_chart(fig, width='stretch')
 
 def show_cluster_profile(df: pd.DataFrame, numeric_cols: list) -> pd.DataFrame | None:
     st.subheader("Perfil mitja dels clusters")
@@ -63,7 +61,7 @@ def show_cluster_profile(df: pd.DataFrame, numeric_cols: list) -> pd.DataFrame |
         .T
         .reset_index()
     )
-    st.dataframe(profile, use_container_width=True, hide_index=True)
+    st.dataframe(profile, width='stretch', hide_index=True)
     return profile
 
 
@@ -103,7 +101,7 @@ def show_neighborhood_detail(gdf: gpd.GeoDataFrame) -> None:
         .dropna(subset=["valor"])
         .sort_values("variable")
     )
-    st.dataframe(detail, use_container_width=True, hide_index=True)
+    st.dataframe(detail, width='stretch', hide_index=True)
 
 
 
@@ -145,4 +143,53 @@ def show_cluster_bar_chart(df: pd.DataFrame) -> None:
         title=f"Mitjana de {selected_variable} per cluster",
     )
     fig.update_layout(showlegend=False, xaxis_title=None, yaxis_title=None)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
+
+
+def show_heatmap(gdf: gpd.GeoDataFrame) -> None:
+    st.subheader("Heatmap de la variable seleccionada")
+
+    
+    numeric_cols = get_numeric_columns(gdf)
+    if not numeric_cols:
+        st.info("No hi ha variables numeriques disponibles per comparar.")
+        return
+    
+    selected_variable = st.selectbox(
+        "Variable per al heatmap",
+        numeric_cols,
+        index=0,
+    )
+
+    map_data = gdf.dropna(subset=[selected_variable]).copy()
+    if map_data.empty:
+        st.warning("No hi ha dades disponibles per a la variable seleccionada.")
+        return
+
+    map_data["cap_nom_barri"] = map_data["nom_barri"].str.capitalize()
+    center = map_data.geometry.unary_union.centroid
+    fig = px.choropleth_mapbox(
+        map_data,
+        geojson=map_data.__geo_interface__,
+        locations="codi_barri",
+        featureidkey="properties.codi_barri",
+        color=selected_variable,
+        color_continuous_scale="greens",
+        hover_name="cap_nom_barri",
+        hover_data={
+            "codi_barri": True,
+            selected_variable: True,
+        },
+        mapbox_style="carto-positron",
+        center={"lat": center.y, "lon": center.x},
+        zoom=11,
+        opacity=0.75,
+        title=f"Heatmap de {selected_variable} a Barcelona",
+    )
+    fig.update_layout(
+        margin={"r": 0, "t": 50, "l": 0, "b": 0},
+        coloraxis_colorbar={"title": selected_variable},
+        height=620,
+    )
+    fig.update_traces(marker_line_width=0.8, marker_line_color="white")
+    st.plotly_chart(fig, width='stretch')

@@ -6,7 +6,7 @@ import pandas as pd
 
 from utils.ingesta_dades import load_data, load_dim_barris, load_labels_config
 from utils.transformacions import prepare_geodata, get_numeric_columns, get_label_data
-from utils.visualitzacio import plot_cluster_map, show_cluster_profile, show_neighborhood_detail, show_cluster_bar_chart
+from utils.visualitzacio import plot_cluster_map, show_heatmap, show_cluster_profile, show_neighborhood_detail, show_cluster_bar_chart
 
 def main():
     
@@ -49,11 +49,16 @@ def main():
     with left_col:
         plot_cluster_map(gdf, periode_seleccionat)
         show_cluster_profile(df_sel, num_cols)
+        if periode_seleccionat == "Deltes":
+            show_heatmap(gdf)
 
     with right_col:
         show_neighborhood_detail(gdf)
         show_cluster_bar_chart(df_sel)
-
+    
+    if periode_seleccionat != "Deltes":
+        show_heatmap(gdf)
+        
 
 if __name__ == "__main__":
     main()
