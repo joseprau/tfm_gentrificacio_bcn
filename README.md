@@ -116,6 +116,7 @@ Un cop els canvis s' han aplicat, s' ha re-executat el notebook [eda.ipynb](note
 |---:|:-----------|:--------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------|
 |  df_2015 | k=3        | kmeans  | pca          | Tot i que k=3 és més simple i interpretable, k=4 ens permet diferenciar altres perfils de barris que amb k=3 queden barrejats. |
 |  df_2023 | k=4        | kmeans  | pca          | Segunt amb la conclusió de 2015, s’ha seleccionat una solució amb k=4 per una major diferenciació entre perfils urbans. |
+| df_deltes | k=3        | kmeans  | pca          | En ambdós casos, com hem vist abans k=4 és el que obté un valor més alt. No obstant, per simplicitat i interpretabilitat seleccionarem k=3, on hi ha un grup dominant i dos clusters més residuals / extrems. Mantenim amb PCA per homogeneïtat.|
 
 # Clusters 2015
 ## Mapa Clusters
@@ -222,20 +223,37 @@ Cluster 3
 ![clusters_deltes](results/figs/clusters_deltes.png)
 
 ## Estadístiques clusters
-|                                       |             0 |             1 |             2 |            3 |
-|:--------------------------------------|--------------:|--------------:|--------------:|-------------:|
-| poblacio_total                        | 23798.1       | 33861.4       | 17477.2       | 26611.5      |
-| pct_pob_estrangera                    |     0.167663  |     0.261791  |     0.193395  |     0.513533 |
-| pct_pob_estrangera_occidental         |     0.0685891 |     0.0984038 |     0.0331555 |     0.16441  |
-| pct_joves                             |     0.238383  |     0.300125  |     0.255152  |     0.428441 |
-| pct_universitaris                     |     0.424067  |     0.378786  |     0.191487  |     0.30791  |
-| import_euros                          | 27788.4       | 20775.3       | 15475.1       | 14977.9      |
-| index_gini                            |    36.2779    |    32.4586    |    28.8087    |    35.6601   |
-| total_incidents_1000_hab              |    31.2712    |    23.4096    |    55.0077    |    30.3184   |
-| locals_restauracio_1000_hab           |     4.49298   |     8.84778   |     3.17971   |    14.7237   |
-| locals_sanitaris_1000_hab             |     2.16051   |     1.34357   |     0.694303  |     0.515284 |
-| locals_serveis_professionals_1000_hab |     0.637956  |     1.06809   |     1.16425   |     0.185438 |
-| preu_mitja_m2                         |    17.1818    |    16.8529    |    13.5829    |    17.175    |
-| pisos_turistics_1000_hab              |     2.88351   |    10.2105    |     0.740882  |     6.27533  |
+|                                             |          0 |          1 |          2 |
+|:--------------------------------------------|-----------:|-----------:|-----------:|
+| delta_pct_pob_estrangera                    |  0.565607  |  0.985491  |  0.28977   |
+| delta_pct_pob_estrangera_occidental         |  0.363137  |  3.4234    |  0.209883  |
+| delta_pct_joves                             |  0.0139006 | -0.034585  | -0.0529086 |
+| delta_pct_universitaris                     |  0.272532  |  2.17926   |  0.290271  |
+| delta_poblacio_total                        |  0.0550997 |  0.495544  |  0.0289926 |
+| delta_import_euros                          |  0.294933  |  0.568477  |  0.361119  |
+| delta_index_gini                            | -0.0515015 |  0         | -0.0848646 |
+| delta_total_incidents_1000_hab              |  0.113729  | -0.249872  |  0.164951  |
+| delta_locals_restauracio_1000_hab           | -0.0141325 |  0.0507407 |  0.201675  |
+| delta_locals_sanitaris_1000_hab             |  0.494654  |  0         |  0.842879  |
+| delta_locals_serveis_professionals_1000_hab |  0.0162183 | 13.0417    | -0.205832  |
+| delta_preu_mitja_m2                         |  0.476428  |  1.0303    |  0.432195  |
+| delta_pisos_turistics_1000_hab              |  0.273627  | -0.331347  | -0.0120218 |
 
 ## Observacions
+
+Cluster 0
+- Agrupa la majoria de barris.
+- Increments mitjans en estrangers, universitaris, renda i preu.
+- No destaca especialment en cap dimensió extrema.
+- Pot representar la dinàmica urbana general de Barcelona.
+
+Cluster 1 — outlier
+- Només inclou la Marina del Prat Vermell.
+- Té increments molt extrems en població, universitaris, serveis professionals i preu.
+
+Cluster 2
+- Inclou barris cèntrics, turístics i alguns perifèrics amb canvis forts.
+- Més increment de renda, restauració i alguns indicadors urbans.
+- Menys increment de població jove i turística que cluster 0, però més pressió econòmica.
+
+En general, no s'observen clusters nítids i ben diferenciats com en els casos de 2015 i 2023, per tant més complicats d'analitzar. El clustering sobre deltes es veu fortament afectat per valors exterms, amb canvis percentuals molt abruptes, com és el cas de la Marina del Prat Vermell, amb increments molt extrems en la població, serveis professionals, etc. Per tant, aplicant aquest clustering sobre aquest tipo de dades, serveix per a detectar transformacions atípiques més que clusteritzar per barris. 
