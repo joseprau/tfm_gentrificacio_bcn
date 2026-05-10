@@ -94,7 +94,7 @@ Un cop els canvis s' han aplicat, s' ha re-executat el notebook [eda.ipynb](note
 |---:|:-----------|:--------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------|:-------|
 |  df_2015 | k=3        | kmeans  | pca          | Tot i que k=3 és més simple i interpretable, k=4 ens permet diferenciar altres perfils de barris que amb k=3 queden barrejats. | [Elbow Method](results/figs/seleccio_k_2015.png) i [Silhouettes](results/figs/silhouettes_2015.png) |
 |  df_2023 | k=4        | kmeans  | pca          | Segunt amb la conclusió de 2015, s’ha seleccionat una solució amb k=4 per una major diferenciació entre perfils urbans. | [Elbow Method](results/figs/seleccio_k_2023.png) i [Silhouettes](results/figs/silhouettes_2023.png) |
-| df_deltes | k=3        | kmeans  | pca          | En ambdós casos, com hem vist abans k=4 és el que obté un valor més alt. No obstant, per simplicitat i interpretabilitat seleccionarem k=3, on hi ha un grup dominant i dos clusters més residuals / extrems. Mantenim amb PCA per homogeneïtat.| [Elbow Method](results/figs/seleccio_k_deltes.png) i [Silhouettes](results/figs/silhouettes_deltes.png) |
+| df_deltes | k=3        | kmeans  | pca          | En ambdós casos, com hem vist abans k=4 és el que obté un valor més alt. No obstant, per simplicitat i interpretabilitat seleccionarem k=3, on hi ha un grup dominant i dos clusters més residuals / extrems. Mantenim amb PCA per homogeneïtat.| [Elbow Method](results/figs/seleccio_k_deltes.png) i [Silhouettes](results/figs/silhouettes_deltes_pca.png) |
 
 # Clusters 2015
 ## Mapa Clusters
