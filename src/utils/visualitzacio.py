@@ -194,7 +194,7 @@ def show_heatmap(gdf: gpd.GeoDataFrame) -> None:
     st.plotly_chart(fig, width='stretch')
 
 def deltes_bar(gdf):
-    st.subheader("Top 10 variables amb més variació")
+    st.subheader("Variació per variable")
     numeric_cols = get_numeric_columns(gdf)
 
     chart_data = (
