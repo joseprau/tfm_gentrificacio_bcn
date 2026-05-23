@@ -20,6 +20,6 @@ def load_dim_barris(base_dir: Path=Path("..")):
 
 
 def load_labels_config(base_dir: Path=Path("..")):
-    with open(base_dir / "clusters_config.json", "r") as f:
+    with open(base_dir / "clusters_config.json", "r", encoding="utf-8") as f:
         return json.load(f)
     
