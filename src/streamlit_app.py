@@ -28,43 +28,38 @@ def main():
     dim_barris = load_dim_barris(BASE_DIR)
     cluster_config = load_labels_config(CONFIG_PATH)
 
-    with st.sidebar:
-        st.header("Filtres")
-        periode_seleccionat = st.radio(
-            "Conjunt de dades",
-            options= [d for d in datasets.keys()],
-            index= 0
-        )
+    dataset_tabs = st.tabs(list(datasets.keys()))
+    for tab, periode_seleccionat in zip(dataset_tabs, datasets.keys()):
+        with tab:
+            df_raw_sel = datasets[periode_seleccionat].copy()
+            
+            df_sel = get_label_data(df_raw_sel, cluster_config, periode_seleccionat)
+            
 
-    df_raw_sel = datasets[periode_seleccionat].copy()
-    
-    df_sel = get_label_data(df_raw_sel, cluster_config, periode_seleccionat)
-    
+            gdf = prepare_geodata(df_sel, dim_barris)
+            num_cols = get_numeric_columns(df_sel)
 
-    gdf = prepare_geodata(df_sel, dim_barris)
-    num_cols = get_numeric_columns(df_sel)
+            row1_1, row_1_2 = st.columns(2, vertical_alignment="top", border=True)
+            row_2_1, row_2_2 = st.columns(2, vertical_alignment="top", border=True)
 
-    row1_1, row_1_2 = st.columns(2, vertical_alignment="top", border=True)
-    row_2_1, row_2_2 = st.columns(2, vertical_alignment="top", border=True)
+        #    left_col, right_col = st.columns([1.1, 0.9], gap="large")
 
-#    left_col, right_col = st.columns([1.1, 0.9], gap="large")
-
-    with row1_1:
-        plot_cluster_map(gdf, periode_seleccionat)
-    with row_2_1:
-        show_cluster_profile(df_sel, num_cols)
-    with row_1_2:
-        show_neighborhood_detail(gdf)
-    with row_2_2:
-        show_cluster_bar_chart(df_sel)
-    if periode_seleccionat != "Deltes":
-        show_heatmap(gdf)
-    else:
-        row_3_1, row_3_2 = st.columns(2, vertical_alignment="top", border=True)
-        with row_3_1:
-            show_heatmap(gdf)
-        with row_3_2:
-            deltes_bar(gdf)
+            with row1_1:
+                plot_cluster_map(gdf, periode_seleccionat)
+            with row_2_1:
+                show_cluster_profile(df_sel, num_cols)
+            with row_1_2:
+                show_neighborhood_detail(gdf, key_prefix=periode_seleccionat)
+            with row_2_2:
+                show_cluster_bar_chart(df_sel, key_prefix=periode_seleccionat)
+            if periode_seleccionat != "Deltes":
+                show_heatmap(gdf, key_prefix=periode_seleccionat)
+            else:
+                row_3_1, row_3_2 = st.columns(2, vertical_alignment="top", border=True)
+                with row_3_1:
+                    show_heatmap(gdf, key_prefix=periode_seleccionat)
+                with row_3_2:
+                    deltes_bar(gdf)
 
         
 

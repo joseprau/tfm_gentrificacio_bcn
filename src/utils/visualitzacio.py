@@ -7,6 +7,13 @@ import streamlit as st
 from utils.transformacions import get_numeric_columns, get_label_data
 
 
+SHARED_NEIGHBORHOOD_KEY = "selected_codi_barri"
+
+
+def sync_neighborhood_selection(widget_key: str) -> None:
+    st.session_state[SHARED_NEIGHBORHOOD_KEY] = st.session_state[widget_key]
+
+
 def plot_cluster_map(gdf: gpd.GeoDataFrame, selected_period: str) -> None:
     st.subheader(f"Clusters dels barris de Barcelona ({selected_period})")
     map_data = gdf.dropna(subset=["cluster"]).copy()
@@ -64,18 +71,39 @@ def show_cluster_profile(df: pd.DataFrame, numeric_cols: list) -> pd.DataFrame |
     return profile
 
 
-def show_neighborhood_detail(gdf: gpd.GeoDataFrame) -> None:
+def show_neighborhood_detail(gdf: gpd.GeoDataFrame, key_prefix: str) -> None:
     st.subheader("Detall del barri")
 
     options = (
         gdf[["codi_barri", "nom_barri"]]
         .dropna(subset=["nom_barri"])
+        .drop_duplicates(subset=["codi_barri"])
         .sort_values("nom_barri")
         .assign(label=lambda data: data["nom_barri"] + " (" + data["codi_barri"].astype(str) + ")")
     )
 
-    selected_label = st.selectbox("Escull un barri", options["label"])
-    selected_code = options.loc[options["label"] == selected_label, "codi_barri"].iloc[0]
+    available_codes = options["codi_barri"].tolist()
+    if not available_codes:
+        st.info("No hi ha barris disponibles per seleccionar.")
+        return
+
+    shared_code = st.session_state.get(SHARED_NEIGHBORHOOD_KEY, available_codes[0])
+    if shared_code not in available_codes:
+        shared_code = available_codes[0]
+        st.session_state[SHARED_NEIGHBORHOOD_KEY] = shared_code
+
+    widget_key = f"{key_prefix}_barri"
+    st.session_state[widget_key] = shared_code
+
+    labels_by_code = dict(zip(options["codi_barri"], options["label"]))
+    selected_code = st.selectbox(
+        "Escull un barri",
+        available_codes,
+        format_func=lambda code: labels_by_code.get(code, str(code)),
+        key=widget_key,
+        on_change=sync_neighborhood_selection,
+        args=(widget_key,),
+    )
     row = gdf.loc[gdf["codi_barri"] == selected_code].drop(columns=["geometry", "geometria_wgs84"], errors="ignore")
 
     if row.empty:
@@ -84,6 +112,7 @@ def show_neighborhood_detail(gdf: gpd.GeoDataFrame) -> None:
 
     record = row.iloc[0]
     cluster_value = record.get("nom", "No disponible")
+    selected_label = labels_by_code.get(selected_code, str(selected_code))
 
     col1, col2 = st.columns(2)
     col1.metric("Barri", record.get("nom_barri", selected_label))
@@ -104,7 +133,7 @@ def show_neighborhood_detail(gdf: gpd.GeoDataFrame) -> None:
 
 
 
-def show_cluster_bar_chart(df: pd.DataFrame) -> None:
+def show_cluster_bar_chart(df: pd.DataFrame, key_prefix: str) -> None:
     st.subheader("Comparacio de mitjanes per cluster")
 
     if "cluster" not in df.columns:
@@ -118,7 +147,8 @@ def show_cluster_bar_chart(df: pd.DataFrame) -> None:
 
     selected_variable = st.selectbox(
         "Variable per comparar",
-        numeric_cols
+        numeric_cols,
+        key=f"{key_prefix}_cluster_variable",
     )
     chart_data = (
         df.groupby(["nom", "color"], dropna=False)[selected_variable]
@@ -145,7 +175,7 @@ def show_cluster_bar_chart(df: pd.DataFrame) -> None:
     st.plotly_chart(fig, width='stretch')
 
 
-def show_heatmap(gdf: gpd.GeoDataFrame) -> None:
+def show_heatmap(gdf: gpd.GeoDataFrame, key_prefix: str) -> None:
     st.subheader("Heatmap")
 
     
@@ -158,6 +188,7 @@ def show_heatmap(gdf: gpd.GeoDataFrame) -> None:
         "Variable per al heatmap",
         numeric_cols,
         index=0,
+        key=f"{key_prefix}_heatmap_variable",
     )
 
     map_data = gdf.dropna(subset=[selected_variable]).copy()
