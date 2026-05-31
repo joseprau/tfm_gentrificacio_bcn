@@ -47,7 +47,7 @@ def main():
             with row1_1:
                 plot_cluster_map(gdf, periode_seleccionat)
             with row_2_1:
-                show_cluster_profile(df_sel, num_cols)
+                show_cluster_profile(gdf, num_cols)
             with row_1_2:
                 show_neighborhood_detail(gdf, key_prefix=periode_seleccionat)
             with row_2_2:

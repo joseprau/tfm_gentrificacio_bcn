@@ -61,7 +61,7 @@ def show_cluster_profile(df: pd.DataFrame, numeric_cols: list) -> pd.DataFrame |
         return None
 
     profile = (
-        df.groupby("cluster", dropna=False)[numeric_cols]
+        df.groupby("nom", dropna=False)[numeric_cols]
         .mean()
         .round(3)
         .T
