@@ -226,12 +226,16 @@ def show_heatmap(gdf: gpd.GeoDataFrame, key_prefix: str) -> None:
 
 def deltes_bar(gdf):
     st.subheader("Variació per variable")
-    numeric_cols = get_numeric_columns(gdf)
-
-    chart_data = (
-        gdf[numeric_cols].mean().reset_index(name="Valor").sort_values("Valor")
-    )
     
+    numeric_cols = get_numeric_columns(gdf)
+    shared_code = st.session_state.get(SHARED_NEIGHBORHOOD_KEY)
+    if shared_code is None or shared_code not in gdf["codi_barri"].values:
+        chart_data = (
+            gdf[numeric_cols].mean().reset_index(name="Valor").sort_values("Valor")
+        )
+    else:
+        chart_data = gdf[numeric_cols][gdf["codi_barri"] == shared_code].mean().reset_index(name="Valor").sort_values("Valor")
+
     fig = px.bar(
         chart_data,
         x="Valor",
